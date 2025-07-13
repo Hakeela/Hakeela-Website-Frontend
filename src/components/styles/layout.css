@@ -1,0 +1,10 @@
+/* layout.css */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;     /* full viewport height */
+}
+
+.layout-main {
+  flex: 1;               /* takes up remaining space */
+}

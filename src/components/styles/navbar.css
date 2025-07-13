@@ -1,0 +1,58 @@
+/* ===== Reset small things we don't want from the browser ===== */
+.navbar ul,
+.navbar li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ===== The nav bar container ===== */
+.navbar {
+  display: flex;                 /* row layout */
+  align-items: center;           /* vertically center children */
+  justify-content: space-between;/* logo | center links | avatar */
+  padding: 0 2rem;               /* horizontal breathing room */
+  height: 64px;                  /* whatever fits your design */
+  border-bottom: 1px ;      /* the blue line */
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+/* ===== Center list ===== */
+.navbar__list {
+  display: flex;
+  gap: 2.5rem;                   /* space between each link */
+  font-size: 0.9rem;
+}
+
+.navbar__link {
+  color: #6b6b6b;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar__link:hover {
+  color: #000000;
+}
+
+/* ===== Logo & avatar images ===== */
+.navbar__logo img,
+.navbar__avatar img {
+  display: block;
+  height: 40px;                 /* scale to fit; adjust if needed */
+  width: auto;
+}
+
+/* Make avatar round like the shot */
+.navbar__avatar img {
+  border-radius: 50%;
+}
+
+/* ===== Optional: keep centre menu truly centred on wide screens ===== */
+/* You only need this if the logo or avatar widths vary a lot. */
+.navbar__list {
+  flex: 1 1 auto;               /* allow it to grow/shrink */
+  justify-content: center;      /* push links to true centre */
+}

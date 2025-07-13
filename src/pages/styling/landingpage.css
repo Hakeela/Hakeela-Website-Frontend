@@ -1,0 +1,378 @@
+.homesection1{
+    background-color: whitesmoke;
+}
+.hometext{
+    color:rgba(0, 0, 184, 1);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 8px;
+}
+.p1{
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+    margin: 0;
+}
+.homtexts{
+    width: 400px;
+    text-align: center;
+}
+.hometexts h1{
+    padding-top: 50px;
+    font-size: 3rem;
+    line-height: 1.2;
+}
+.hometexts h3 {
+    font-size: 25px;
+}
+.button1{
+    display: block;
+    margin: 0 auto;
+    background-color:rgba(0, 0, 184, 1);
+    color: white;
+    margin-top: 15px;
+    border-color: transparent;
+    border-radius: 20px;
+    width: 100px;      
+    height: 30px;      
+    font-size: 13px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+button:hover {
+    cursor: pointer;
+}
+.homeimages1 {
+    text-align: center;
+}
+img{
+    height: 250px;
+}
+#img2{
+    height: 200px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.homesection2 {
+    margin-top: 70px;
+}
+.homesection2 h2{
+    color:rgba(0, 0, 184, 1);
+    text-align: center;
+    margin: 0 auto;
+}
+.p2 {
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+    margin: 0 auto;
+    margin-top: 6px;
+}
+.homestatements {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.icon-button {
+  background-color:rgba(0, 0, 184, 1);
+  color: white;
+  padding: 8px;
+  border-radius: 12px;
+  width: 20px;
+  height: 20px;
+}
+.statements{
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;       
+    border-left: 2px solid rgba(0, 0, 184, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    padding: 1rem;
+}
+.statements h3{
+    color: rgba(0, 0, 184, 1);
+}
+.statements p {
+    color: gray;
+    font-size: 10px;
+}
+.homepartners{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.homepartners img{
+    height: 50px;
+    width: 50px;
+    margin: 50px 40px;
+}
+#ept{
+    height: 90px;
+    width: 90px;
+    margin-top: 30px;
+}
+#loi{
+    width: 100px;
+    height: 30px;
+    margin-top: 60px;
+}
+#ashoka{
+    height: 80px;
+    width: 150px;
+    margin: 38px 0px;
+}
+#hand{
+    margin-left: 5px;
+    height: 30px;
+    width: 30px;
+    margin-top: 60px;
+}
+.homepartners h4{
+    margin-top: 63px;
+}
+.homesection3{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.imgdiv{
+    background-color: rgba(255, 202, 6, 1);
+    border-radius: 10px;
+    height: 380px;
+}
+.imgdiv img{
+    padding: 0;
+    height: 380px;
+    border-radius: 10px;
+}
+.homesection3 h3{
+    padding-top: 20px;
+    color: rgba(0, 0, 184, 1);
+    font-size: 1.5rem;
+}
+.homesection3 button{
+    color: rgba(0, 0, 184, 1);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 184, 1);
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 100px;      
+    height: 30px;      
+    font-size: 10px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.homesection4{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.homesection4 h2{
+    color: rgba(0, 0, 184, 1);
+    text-align: center;
+    margin: 0;
+}
+.icons{
+    width: 60px;
+    height: 30px;
+    margin: 0;
+}
+.homesection4 button{
+    color: rgba(0, 0, 184, 1);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 184, 1);
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 100px;      
+    height: 25px;      
+    font-size: 10px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.homesection5{
+    background-color: whitesmoke;
+    text-align: center;
+}
+.homesection5 h2{
+    color: rgba(0, 0, 184, 1);
+    text-align: center;
+    margin: 0;
+}
+.homesection5 p{
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+}
+.homesection5 img{
+    height: 500px;
+}
+.homesection6{
+    padding-bottom: 50px;
+}
+.homesection6 h2{
+    color: rgba(0, 0, 184, 1);
+    text-align: center;
+    margin: 0;
+}
+.homesection6 p{
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+}
+.team{
+    display: flex;
+    gap: 60px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.circle-background {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(255, 202, 6, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.homesection6 img{
+    height: 150px;
+}
+.team p{
+    margin-top: 0;
+}
+.team h5{
+    margin-bottom: 5px;
+}
+.homediv{
+    display: flex;
+    background-color: rgba(0, 0, 184, 1);
+    width: 48em;
+    height: 10em;
+    border-radius: 10px;
+}
+.homediv img{
+    height: 200px;
+    overflow: visible;
+    margin-top: -40px;
+    margin-left: 200px;
+}
+.maindiv{
+    justify-content: center;
+    margin: 0;
+    display: flex;
+}
+.homediv h3{
+    color: white;
+    font-size: 1.6em;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+.homediv p{
+    color: white;
+    text-align: left;
+    margin: 20px;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+.homediv button{
+    color: white;
+    background-color:rgba(0, 0, 184, 1); 
+    border: 1px solid white;
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100px;      
+    height: 20px;      
+    font-size: 10px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.ima{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 50px;
+}
+.chatbot{
+    margin-top: 20px;
+    text-align: left;
+}
+.chatbot h3{
+    color: rgba(0, 0, 184, 1);;
+}
+.imabong{
+    background-color: rgba(255, 202, 6, 1);
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imabong img{
+    height: 220px;
+    width: 120px;
+    margin-bottom: -90px;
+}
+.chatbot button{
+    color: rgba(0, 0, 184, 1);
+    background-color: white; 
+    border: 1.3px solid rgba(0, 0, 184, 1);
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 60px;      
+    height: 20px;      
+    font-size: 10px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.learn{
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    margin-top: 100px;
+}
+.homelearn{
+    background-color: rgba(0, 0, 184, 1);
+    width: 48em;
+    height: 10em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homelearn h2{
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.homelearn button{
+    color: white;
+    background-color:rgba(0, 0, 184, 1); 
+    border: 1px solid white;
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 100px;      
+    height: 20px;      
+    font-size: 10px;   
+    overflow: visible;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+
+}
+.homelearn img {
+    position: absolute;
+    height: 12.5%;
+    margin-top: 6%;
+}
