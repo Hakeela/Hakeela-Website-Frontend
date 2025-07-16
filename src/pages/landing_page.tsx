@@ -1,10 +1,10 @@
 import "./styling/landingpage.css"
-import { Eye, CircleDot, Rocket } from 'lucide-react';
+import { Eye, CircleDot, Rocket, Play } from 'lucide-react';
 
 
 export default function LandinPage() {
     return(
-        <div>
+        <div className="landingpage">
             <section className="homesection1">
                 <div className="hometexts">
                     <h1 className="hometext">"Building the Future of Tech <br/> Inclusion one community a time"</h1>
@@ -230,6 +230,30 @@ export default function LandinPage() {
                         </h2>
                         <button>Get Started</button>
                         <img src="/Frame 180.png" alt="" />
+                    </div>
+                </div>
+
+                <div className="supportt">
+                    <div className="support">
+                        <div className="donate">
+                            <button>Support our mission</button>
+                            <h1>Donate</h1>
+                            <p>An interview with a participant from our Special needs and tech Workshop,<br/> 
+                            Calabar chapter which aimed to teach digital skills to young people with<br/> 
+                            hearing and speech disabilities. Join Hakeela as we empower special and<br/> 
+                            marginalized youth in Africa with digital skills.</p>
+                            <div className="bottons">
+                                <button id="dbotton">Donate</button>
+                                <button id="lbotton">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div className="interview">
+                            <div className="playbotton"><Play color="white" size={20}/></div>
+                            <h4>Special Needs Workshop Interview</h4>
+                            <p>Watch an inspiring interview with a participant from our Calabar<br/> 
+                            chapter workshop, sharing their journey of learning digital skills.</p>
+                        </div>
                     </div>
                 </div>
             </section>

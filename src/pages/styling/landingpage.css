@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .homesection1{
     background-color: whitesmoke;
 }
@@ -212,6 +218,7 @@ img{
 }
 .homesection6{
     padding-bottom: 50px;
+    align-items: center;
 }
 .homesection6 h2{
     color: rgba(0, 0, 184, 1);
@@ -375,4 +382,103 @@ img{
     position: absolute;
     height: 12.5%;
     margin-top: 6%;
+}
+.supportt{
+    justify-content: center;
+    margin: 0;
+    display: flex;
+}
+.support {
+    background-color: whitesmoke;
+    display: flex;
+    border-radius: 10px;
+    margin-top: 70px;
+    width: 50em;
+    gap: 50px;
+}
+.donate{
+    margin: 30px 25px;
+}
+.donate button{
+    border: 1px solid;
+    border-radius: 20px;
+    width: 120px;      
+    height: 20px;      
+    font-size: 10px;   
+    overflow: visible;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+}
+.donate h1{
+    margin-bottom: 0;
+}
+.donate p{
+    margin-top: 8px;
+    font-size: 10px;
+    text-align: left;
+    line-height: 1.5;
+}
+.bottons{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+#dbotton{
+    background-color: rgba(0, 0, 184, 1);
+    border: 1px solid;
+    color: white;
+    border-color: transparent;
+    border-radius: 20px;
+    width: 65px;      
+    height: 23px;      
+    font-size: 10px;   
+    overflow: visible;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+#lbotton{
+    border: 1px solid;
+    color: rgba(0, 0, 184, 1);
+    border-color: rgba(0, 0, 184, 1);
+    border-radius: 20px;
+    width: 100px;      
+    height: 23px;      
+    font-size: 10px;   
+    overflow: visible;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.interview {
+    background-image: url("/image.png");
+    background-size: contain;
+    border-radius: 10px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 170px;
+    width: 300px;
+}
+.playbotton{
+  width: 40px;
+  height: 40px;
+  background-color: #FFD700; /* Yellow */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.interview h4{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.interview p{
+    font-size: 8px;
+    margin-top: 3px;
 }
