@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "./styles/navbar.css";
 
 const navigation = [
-  { name: "About us",            href: "../pages/about.tsx" },
-  { name: "Blog",                href: "/" },
+  { name: "About us",            href: "/about" },
+  { name: "Blog",                href: "/blog" },
   { name: "Initiatives",         href: "/" },
   { name: "HDx Consulting",      href: "/" },
   { name: "Hakeela Margin Portal", href: "/" }
@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
 
-      <Link to="/" className="navbar__logo">
+      <Link to="/home" className="navbar__logo">
         <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
       </Link>
 
