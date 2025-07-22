@@ -28,9 +28,11 @@ export default function LandingPage() {
                     className="chat-input"
                     placeholder="Not sure of the perfect tech career for you? Let’s chat"
                 />
-                <button className="chat-button">
-                    <Send size={16} strokeWidth={2} />
-                </button>
+                <Link to='/home'>
+                    <button className="chat-button">
+                        <Send size={16} strokeWidth={2} />
+                    </button>
+                </Link>
             </div>
 
             <div className="action-buttons-container">
