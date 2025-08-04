@@ -12,10 +12,11 @@
   align-items: center;           /* vertically center children */
   justify-content: space-between;/* logo | center links | avatar */
   padding: 0 2rem;               /* horizontal breathing room */
-  height: 64px;                  /* whatever fits your design */
+  height: 60px;                  /* whatever fits your design */
   border-bottom: 1px ;      /* the blue line */
   background: #ffffff;
   box-sizing: border-box;
+  border-bottom:1px solid #000000;
 }
 
 /* ===== Center list ===== */

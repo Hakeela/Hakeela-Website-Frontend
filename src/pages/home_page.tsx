@@ -30,7 +30,7 @@ export default function Home() {
 
                 <div className="homestatements">
                     <div className="statements">
-                        <Eye className="icon-button" />
+                        <Eye className="icon-button" size={24} strokeWidth={2} color="white"/>
                         <h3>Vision</h3>
                         <p>
                             To provide the best technological learning,<br/> 
@@ -42,7 +42,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="statements">
-                        <CircleDot className="icon-button" />
+                        <CircleDot className="icon-button" size={24} strokeWidth={2} color="white"/>
                         <h3>Mision</h3>
                         <p>
                             Our mission is to build an inclusive future<br/> 
@@ -56,7 +56,7 @@ export default function Home() {
                         </p>
                     </div>
                     <div className="statements">
-                        <Rocket className="icon-button" />
+                        <Rocket className="icon-button" size={24} strokeWidth={2} color="white"/>
                         <h3>Objectives</h3>
                         <p>
                             By 2030, we aim to train 10,000+ marginalized<br/> 

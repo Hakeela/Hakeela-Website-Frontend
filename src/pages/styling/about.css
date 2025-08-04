@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(249, 249, 249, 1);
+}
+
+.aboutus{
+    background-color: rgba(0, 0, 184, 1);
+    width: 70em;
+    height: 16em;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.aboutus p{
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.aboutus h1{
+    margin-top: 15px;
+    color: white;
+    font-size:35px;
+}
+.aboutus button{
+    color: rgba(0, 0, 184, 1);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 184, 1);
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 180px;      
+    height: 30px;      
+    font-size: 12px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.aboutsection2 {
+    display: flex;
+    margin-top: 80px;
+    gap: 20px;
+    text-align: left;
+}
+.aboutsection2 img{
+    border-radius: 10px;
+    height: 255px;
+    width: 537px;
+}
+.aboutsection2 h2{
+    color: rgba(0, 0, 184, 1);
+    margin-top: 25px;
+}
+.aboutsection2 p{
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.o{
+    padding-left: 25px;
+}
+.aboutsection3 {
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+.aboutsection3 h2{
+    color: rgba(0, 0, 184, 1);
+}
+.aboutsection3 p{
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+}
+#o1{
+    color: black
+}
+.whatwedo{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 70px;
+}
+.tophalf{
+    display: flex;
+    text-align: left;
+    gap: 30px;
+    flex-direction: column;
+}
+.wedo{
+    border-radius: 10px;
+    background-color: white;    
+    border-left: 2px solid rgba(0, 0, 184, 1);
+    padding: 1rem;
+}
+.wedo h3{
+    color: rgba(0, 0, 184, 1);
+}
+.wedo p{
+    color: gray;
+    font-size: 10px;
+}
+.aboutpage h2{
+    color: rgba(0, 0, 184, 1);
+}
+.aboutsection4{
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.storiesdiv{
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+}
+.stories{
+    background-color: rgba(255, 202, 6, 1);
+    border-radius: 10px;
+    height: 200px;
+    width: 500px;
+    overflow: hidden;
+}
+.stories img{
+    margin-top: -10px;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+#story1{
+    margin-top: -50px;
+}
+.storiesdiv p{
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+}
+.storiesdiv button{
+    color: rgba(0, 0, 184, 1);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 184, 1);
+    border-radius: 20px;
+    width: 100px;      
+    height: 20px;      
+    font-size: 12px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.aboutsection5{
+    background-color: rgba(0, 0, 184, 1);
+    width: 70em;
+    height: 10em;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.aboutsection5 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    margin-top: 10%;
+    z-index: 1;
+}
+.aboutsection5 h1{
+    color: white;
+    margin-top: 25px;
+}
+.aboutsection5 button{
+    color: white;
+    background-color: rgba(0, 0, 184, 1);
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 80px;      
+    height: 20px;      
+    font-size: 12px;   
+    overflow: hidden;  
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+.circle-background{
+    width: 200px;
+  height: 200px;
+}
+.circle-background img{
+    height: 200px;
+}
+.team{
+    display: flex;
+    gap: 70px;
+    margin-top: 30px;
+}
+.team h5{
+    color: rgba(0, 0, 184, 1);
+}
+.team p{
+    color: gray;
+    font-size: 10px
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  color: gray;
+  margin-top: 8px;
+}
