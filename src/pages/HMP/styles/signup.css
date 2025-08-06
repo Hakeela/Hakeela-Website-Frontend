@@ -1,0 +1,141 @@
+.signupage{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.leftsign,
+.rightsign{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 50vw;
+}
+
+.leftsign h1{
+    margin-top: 30px;
+}
+
+.leftsign p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-container {
+  max-width: 480px;
+  margin: auto;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.7rem;
+  color: black;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+  background-color: #f8f8f8;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.col {
+  flex: 1;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.password-input {
+  position: relative;
+}
+
+.password-input input {
+  width: 100%;
+  padding-right: 2rem;
+}
+
+.password-input .icon {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: translateY(-50%);
+  cursor: pointer;  
+  
+}
+
+.grey-icon {
+  color: grey;
+  height: 15px;
+  width: 15px;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 0.5rem;
+  background-color: rgba(0, 0, 184, 1);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+#login-text {
+  text-align: left;
+  margin-top: 0.5rem;
+  font-size: 10px;
+}
+
+#login-text a {
+  color: rgba(0, 0, 184, 1);
+  text-decoration: underline;
+}
+
+.rightsign{
+    background-color: rgba(0, 0, 184, 1);
+    text-align: right;
+}
+.rightcontent{
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.rightsign img{
+    height: 50px;
+}
+.rightsign h1{
+    color: white;
+    font-size: 3.15rem;
+    font-weight: 500;
+}
+.rightsign p{
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.rightsign button{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 180px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 10px;
+    padding: 6px 14px;
+    cursor: pointer;
+}

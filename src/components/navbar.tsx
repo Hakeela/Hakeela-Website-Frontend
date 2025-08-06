@@ -2,11 +2,21 @@ import { Link } from "react-router-dom";
 import "./styles/navbar.css";
 
 const navigation = [
-  { name: "About us",            href: "/about" },
-  { name: "Blog",                href: "/blog" },
-  { name: "Initiatives",         href: "/" },
-  { name: "HDx Consulting",      href: "/" },
-  { name: "Hakeela Margin Portal", href: "/" }
+  { name: "About us", href: "/about" },
+  { name: "Blog", href: "/blog" },
+  {
+    name: "Initiatives ▼",
+    href: "",
+    children: [
+      { name: "Hakeela Margin Internship", href: "" },
+      { name: "Hakeela Special Needs And Tech", href: "" },
+      { name: "Hakeela Fund", href: "" },
+      { name: "HDx Consulting", href: "/hdxconsulting" },
+      { name: "Hakeela Tech Hub", href: "" }
+    ]
+  },
+  { name: "HDx Consulting", href: "/hdxconsulting" },
+  { name: "Hakeela Margin Portal", href: "/signup" }
 ];
 
 export default function Navbar() {
@@ -19,13 +29,31 @@ export default function Navbar() {
 
       <ul className="navbar__list">
         {navigation.map(item => (
-          <li key={item.name}>
-            <Link to={item.href} className="navbar__link">
-              {item.name}
-            </Link>
+          <li key={item.name} className="navbar__item">
+            {item.children ? (
+              <div className="navbar__dropdown">
+                <button className="navbar__link dropdown-toggle">
+                  {item.name}
+                </button>
+                <ul className="dropdown-menu">
+                  {item.children.map(sub => (
+                    <li key={sub.name}>
+                      <Link to={sub.href} className="dropdown-item">
+                        {sub.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <Link to={item.href} className="navbar__link">
+                {item.name}
+              </Link>
+            )}
           </li>
         ))}
       </ul>
+
 
       <Link to="/" className="navbar__avatar">
         <img src="/Imabong.png" alt="Profile avatar" />
