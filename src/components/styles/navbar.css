@@ -48,7 +48,8 @@
 
 /* Make avatar round like the shot */
 .navbar__avatar img {
-  border-radius: 50%;
+  border-radius: 30%;
+  height: 50px;
 }
 
 /* ===== Optional: keep centre menu truly centred on wide screens ===== */

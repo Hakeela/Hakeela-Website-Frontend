@@ -14,7 +14,7 @@ export default function SignUp() {
     <div className="signupage">
             <div className="leftsign">
                 <form className="form-container">
-                    <Link to="/home"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
+                    <Link to="/marginportal"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
                 <h1>Create an Account</h1>
                 <p>Enter your details to start your learning experience</p>
                 <label>Full Name</label>

@@ -139,3 +139,7 @@ input, select {
     padding: 6px 14px;
     cursor: pointer;
 }
+.reset{
+  color: rgba(0, 0, 184, 1);
+  font-size: 10px;
+}
