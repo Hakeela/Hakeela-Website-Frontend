@@ -1,55 +1,96 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
-import "react-phone-number-input/style.css";
 import './styles/signup.css';
+import { logIn } from "../../firebase/authService";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      await logIn(email, password);
+      navigate("/dashboard");
+    } catch (error: unknown) {
+      if (error instanceof Error) alert(error.message);
+      else alert("An unknown error occurred.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const isButtonDisabled = !email || !password || loading;
 
   return (
     <div className="signupage">
-            <div className="leftsign">
-                <form className="form-container">
-                    <Link to="/signup"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
-                <h1>Log into yourAccount</h1>
-                <p>Login to continue your learning experience</p>
+      <div className="leftsign">
+        <form className="form-container" onSubmit={handleLogin}>
+          <Link to="/signup" style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
+          <h1>Log into your Account</h1>
+          <p>Login to continue your learning experience</p>
 
-                <label>Email</label>
-                <input type="email" placeholder="Enter email" />
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-                <label>How did you hear about us?</label>
-        
-                <label>Password</label>
-                <div className="password-input">
-                    <input
-                    type={passwordVisible ? "text" : "password"}
-                    placeholder="Enter password"
-                    />
-                    <span onClick={() => setPasswordVisible(!passwordVisible)} className="icon">
-                    {passwordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}
-                    </span>
-                </div>
+          <label>Password</label>
+          <div className="password-input">
+            <input
+              type={passwordVisible ? "text" : "password"}
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span
+              onClick={() => setPasswordVisible(!passwordVisible)}
+              className="icon"
+              style={{ cursor: "pointer" }}
+            >
+              {passwordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}
+            </span>
+          </div>
 
-                <Link className="reset" to='/resetpassword'>Reset Password</Link>
+          <Link className="reset" to='/resetpassword'>Reset Password</Link>
 
-                <button type="submit" className="submit-button">Login</button>
+          <button
+            type="submit"
+            className="submit-button"
+            disabled={isButtonDisabled}
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
 
-                <p id="login-text">
-                    Don't have an account? <Link to="/signup">Create an Account</Link>
-                </p>
-                </form>
-            </div>
+          <p id="login-text">
+            Don't have an account? <Link to="/signup">Create an Account</Link>
+          </p>
+        </form>
+      </div>
 
-        <div className="rightsign">
-            <div className="rightcontent">
-                <img src="/Hakeela Logo Icon (white) 1.png" alt="" />
-                <h1>Empowering<br/>the Next<br/>Generation of<br/>Creators and<br/>Innovators</h1>
-                <p>At Hakeela, we equip students with practical<br/>digital skills to turn ideas into impact. From<br/>coding to design, our expert-led courses help<br/>you learn fast, build real projects, and thrive in<br/>the digital world.</p>
-                <button>Join the Community ➜</button>
-            </div>
+      <div className="rightsign">
+        <div className="rightcontent">
+          <img src="/Hakeela Logo Icon (white) 1.png" alt="" />
+          <h1>Empowering<br />the Next<br />Generation of<br />Creators and<br />Innovators</h1>
+          <p>At Hakeela, we equip students with practical<br />digital skills to turn ideas into impact. From<br />coding to design, our expert-led courses help<br />you learn fast, build real projects, and thrive in<br />the digital world.</p>
+          <button>Join the Community ➜</button>
         </div>
-
+      </div>
     </div>
   );
 }
