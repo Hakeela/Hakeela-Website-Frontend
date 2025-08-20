@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import "react-phone-number-input/style.css";
 import "./styles/signup.css";
 
@@ -8,6 +8,7 @@ export default function ResetPassword() {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   // Utility: safely parse JSON
   const safeJson = async (res: Response) => {
@@ -78,10 +79,7 @@ export default function ResetPassword() {
       const data = await safeJson(res);
       if (res.ok && data.success) {
         alert("Password reset successful! You can now log in.");
-        setStep(1);
-        setEmail("");
-        setOtp("");
-        setPassword("");
+        setTimeout(() => navigate("/login"), 1000);
       } else {
         alert(data.message || "Failed to reset password");
       }
