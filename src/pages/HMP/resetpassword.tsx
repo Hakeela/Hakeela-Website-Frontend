@@ -9,6 +9,18 @@ export default function ResetPassword() {
   const [otp, setOtp] = useState("");
   const [password, setPassword] = useState("");
 
+  // Utility: safely parse JSON
+  const safeJson = async (res: Response) => {
+    try {
+      if (res.headers.get("content-type")?.includes("application/json")) {
+        return await res.json();
+      }
+      return {};
+    } catch {
+      return {};
+    }
+  };
+
   // Call API to send OTP
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,15 +30,16 @@ export default function ResetPassword() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      const data = await res.json();
+
+      const data = await safeJson(res);
       if (res.ok && data.success) {
         setStep(2);
       } else {
-        alert(data.error || "Failed to send OTP");
+        alert(data.message || "Failed to send OTP");
       }
     } catch (err) {
       console.error(err);
-      alert("Network error");
+      alert("Network error while sending OTP");
     }
   };
 
@@ -39,7 +52,8 @@ export default function ResetPassword() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
       });
-      const data = await res.json();
+
+      const data = await safeJson(res);
       if (res.ok && data.success) {
         setStep(3);
       } else {
@@ -47,7 +61,7 @@ export default function ResetPassword() {
       }
     } catch (err) {
       console.error(err);
-      alert("Network error");
+      alert("Network error while verifying OTP");
     }
   };
 
@@ -60,27 +74,36 @@ export default function ResetPassword() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-      const data = await res.json();
+
+      const data = await safeJson(res);
       if (res.ok && data.success) {
         alert("Password reset successful! You can now log in.");
         setStep(1);
+        setEmail("");
+        setOtp("");
+        setPassword("");
       } else {
-        alert(data.error || "Failed to reset password");
+        alert(data.message || "Failed to reset password");
       }
     } catch (err) {
       console.error(err);
-      alert("Network error");
+      alert("Network error while resetting password");
     }
   };
 
   return (
     <div className="signupage">
       <div className="leftsign">
-        <form className="form-container" onSubmit={
-          step === 1 ? handleSendOtp :
-          step === 2 ? handleVerifyOtp :
-          handleResetPassword
-        }>
+        <form
+          className="form-container"
+          onSubmit={
+            step === 1
+              ? handleSendOtp
+              : step === 2
+              ? handleVerifyOtp
+              : handleResetPassword
+          }
+        >
           <Link
             to="/login"
             style={{ color: "rgba(0, 0, 184, 1)", textDecoration: "none" }}
