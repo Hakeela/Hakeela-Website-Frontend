@@ -1,20 +1,10 @@
-import './styling/landingpage.css'
+import './styling/landingpage.css';
 import { Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
     return (
         <div className="landingpage">
-            {/* <div className="background">
-                <img className="bg bg1" src="/Play.svg" alt="" />
-                <img className="bg bg2" src="/Box.svg" alt="" />
-                <img className="bg bg3" src="/Box1.svg" alt="" />
-                <img className="bg bg4" src="/Box2.svg" alt="" />
-                <img className="bg bg5" src="/Play.svg" alt="" />
-                <img className="bg bg6" src="/Play.svg" alt="" />
-                <img className="bg bg7" src="/Play.svg" alt="" />
-                <img className="bg bg8" src="/Play.svg" alt="" />
-            </div> */}
             <div className='landingpageimage'>
                 <img src="/IMG_5568 1.png" alt="" />
             </div>
@@ -51,5 +41,5 @@ export default function LandingPage() {
             </div>
             <p id='p'>By messaging Imaobong, you agree our Terms and have read our Privacy Policy.</p>
         </div>
-    )
+    );
 }

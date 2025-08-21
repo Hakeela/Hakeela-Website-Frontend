@@ -7,7 +7,7 @@ export default function Home() {
         <div className="homepage">
             <section className="homesection1">
                 <div className="hometexts">
-                    <h1 className="hometext">"Building the Future of Tech <br/> Inclusion one community a time"</h1>
+                    <h1 className="hometext">"Building the Future of Tech Inclusion one community a time"</h1>
                     <h3 className="hometext">using AI + Empathy</h3>
                     <p className="p1">Creating an inclusive and sustainable future of edtech for young <br/>
                         Africans that are marginalized, underprivileged, and specially assisted.

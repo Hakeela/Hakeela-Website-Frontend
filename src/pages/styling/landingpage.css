@@ -1,4 +1,4 @@
-.landingpage{
+.landingpage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,71 +12,8 @@
     height: 100%;
     box-sizing: border-box;
 }
-/*.background{
-      position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
-}
-.bg{
-    z-index: 0;
-}
-.bg1{
-    width: 130px;
-    height: 154px;
-    top: 475px;
-    left: 1934px;
-    position: absolute;
-}
-.bg2{
-    width: 142px;
-    height: 122px;
-    top: -70px;
-    left: 885px;
-    position: absolute;
-}
-.bg3{
-    width: 119px;
-    height: 102px;
-    top: 926px;
-    left: 331px;
-    position: absolute;
-}
-.bg4{
-    width: 119px;
-    height: 102px;
-    top: 656px;
-    left: 1466px;
-    position: absolute;
-}
-.bg5{
-    width: 130px;
-    height: 154px;
-    left: 1700px;
-    position: absolute;
-}
-.bg6{
-    width: 105px;
-    height: 125px;
-    top: 926px;
-    left: 1291px;
-    position: absolute;
-}
-.bg7{
-    width: 105px;
-    height: 125px;
-    top: 417px;
-    left: -0px;
-    position: absolute;
-}
-.bg8{
-    width: 105px;
-    height: 125px;
-    top: 46px;
-    left: 281px;
-    position: absolute;
-}*/
-.landingpageimage{
+
+.landingpageimage {
     background-color: rgba(255, 202, 6, 1);
     border-radius: 50%;
     width: 60px;
@@ -86,109 +23,198 @@
     align-items: center;
     margin-top: 80px;
 }
-.landingpageimage img{
+
+.landingpageimage img {
     height: 60px;
     width: 40px;
     margin-bottom: -20px;
 }
-.landingpage h1{
+
+.landingpage h1 {
     color: rgba(0, 0, 184, 1);
     font-size: 3em;
     margin-top: 25px;
 }
-.landingpage p{
-    line-height: 1.;
+
+.landingpage p {
+    line-height: 1.5;
     color: rgba(30, 30, 30, 0.6);
     margin-top: 20px;
+    text-align: center;
 }
+
 .chat-prompt {
-  display: flex;
-  align-items: center;
-  background-color: rgba(30, 30, 30, 0.02);
-  border: 1px solid #e5e7eb; 
-  border-radius: 12px;
-  padding: 8px 12px;
-  max-width: 600px;
-  width: 100%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.02);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 8px 12px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
 }
 
 .chat-input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  font-size: 15px;
-  color: #374151; 
-  outline: none;
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #374151;
+    outline: none;
 }
 
 .chat-input::placeholder {
-  color: #9ca3af; 
+    color: #9ca3af;
 }
 
 .chat-button {
-  background-color: rgba(0, 0, 184, 1);
-  border: none;
-  border-radius: 8px;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  margin-left: 8px;
+    background-color: rgba(0, 0, 184, 1);
+    border: none;
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    margin-left: 8px;
 }
 
 .action-buttons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0; 
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
 }
 
-.bottom-group{
+.bottom-group {
     margin-top: 0;
 }
 
 .action-button-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
+
 .action-button {
-  border-radius: 999px;
-  padding: 8px 18px;
-  font-size: 12px;
-  cursor: pointer;
-  border: 2px solid rgba(0, 0, 184, 1);
-  transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 184, 1);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .outlined {
-  background-color: white;
-  color: rgba(0, 0, 184, 1);
+    background-color: white;
+    color: rgba(0, 0, 184, 1);
 }
 
 .filled {
-  background-color: rgba(0, 0, 184, 1);
-  color: white;
+    background-color: rgba(0, 0, 184, 1);
+    color: white;
 }
 
 .outlined:hover {
-  background-color: rgba(0, 0, 184, 1);
-  color: white;
+    background-color: rgba(0, 0, 184, 1);
+    color: white;
 }
 
 .filled:hover {
-  background-color: white;
-  color:rgba(0, 0, 184, 1);;
+    background-color: white;
+    color: rgba(0, 0, 184, 1);
 }
-#p{
+
+#p {
     font-size: 12px;
     margin-top: 120px;
+}
+
+/* ====================================================== */
+/* ============== RESPONSIVE STYLES START HERE ============== */
+/* ====================================================== */
+
+@media screen and (max-width: 768px) {
+    .landingpage {
+        padding: 20px 15px; /* Added horizontal padding */
+        height: auto;
+        min-height: 100vh;
+        justify-content: flex-start;
+    }
+
+    .landingpageimage {
+        width: 50px;
+        height: 50px;
+        margin-top: 40px;
+    }
+
+    .landingpageimage img {
+        height: 50px;
+        width: 35px;
+        margin-bottom: -15px;
+    }
+
+    .landingpage h1 {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    .landingpage p {
+        font-size: 14px;
+        max-width: 500px;
+    }
+
+    .chat-prompt {
+        width: 100%; /* Let it take full width within padding */
+        max-width: 500px;
+    }
+
+    .action-buttons-container {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Creates space between the two button groups */
+    }
+
+    /* === THIS IS THE MAIN FIX === */
+    .action-button-group {
+        display: grid;
+        /* This forces a 3-column layout */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 0; /* Remove old margin */
+    }
+
+    /* This targets the second group of buttons */
+    .bottom-group {
+        display: grid;
+        /* This forces a 2-column layout */
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    /* ============================ */
+
+    .action-button {
+        padding: 8px 10px; /* Adjusted padding */
+        font-size: 12px;
+        text-align: center;
+        white-space: nowrap; /* Prevents text from wrapping inside button */
+    }
+
+    #p {
+        margin-top: 50px;
+        font-size: 11px;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
 }
