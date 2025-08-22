@@ -4,26 +4,62 @@ import { Eye, EyeOff } from "lucide-react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import './styles/signup.css';
+import { signUp } from "../../firebase/authService";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-  const [phone, setPhone] = useState<string>();
+  
+  const [fullName, setFullName] = useState("");
+  const [gender, setGender] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState<string>('');
+  const [email, setEmail] = useState("");
+  const [referralSource, setReferralSource] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSignup = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+  try {
+    await signUp(email, password, {
+      fullName,
+      gender,
+      phoneNumber,
+      referralSource,
+    });
+    navigate("/dashboard");
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+        console.error("Signup failed:", error.message);
+        alert(error.message);
+    } else {
+        console.error("Signup failed:", error);
+        alert("An unknown error occurred");
+    }}
+};
+
+
 
   return (
     <div className="signupage">
             <div className="leftsign">
-                <form className="form-container">
-                    <Link to="/home"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
+                <form className="form-container" onSubmit={handleSignup}>
+                    <Link to="/marginportal"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none' }}>← Back</Link>
                 <h1>Create an Account</h1>
                 <p>Enter your details to start your learning experience</p>
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name" />
+                <input type="text" placeholder="Enter your full name" value={fullName} onChange={(e) => setFullName(e.target.value)}/>
 
                 <div className="row">
                     <div className="col">
                     <label>Gender</label>
-                    <select>
+                    <select value={gender} onChange={(e) => setGender(e.target.value)}>
                         <option>Select gender</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -35,8 +71,8 @@ export default function SignUp() {
                     <label>Phone Number</label>
                     <PhoneInput
                         placeholder="Enter phone number"
-                        value={phone}
-                        onChange={setPhone}
+                        value={phoneNumber} 
+                        onChange={(value) => setPhoneNumber(value || '')}
                         defaultCountry="NG"
                         className="phone-input"
                     />
@@ -44,10 +80,10 @@ export default function SignUp() {
                 </div>
 
                 <label>Email</label>
-                <input type="email" placeholder="Enter email" />
+                <input type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
                 <label>How did you hear about us?</label>
-                <select>
+                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
                     <option>Select option</option>
                     <option>Social Media</option>
                     <option>Friend</option>
@@ -60,6 +96,8 @@ export default function SignUp() {
                     <input
                     type={passwordVisible ? "text" : "password"}
                     placeholder="Enter password"
+                    value={password} 
+                    onChange={(e) => setPassword(e.target.value)}
                     />
                     <span onClick={() => setPasswordVisible(!passwordVisible)} className="icon">
                     {passwordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}
@@ -71,6 +109,8 @@ export default function SignUp() {
                     <input
                     type={confirmPasswordVisible ? "text" : "password"}
                     placeholder="Re-enter password"
+                    value={confirmPassword} 
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                     <span onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)} className="icon">
                     {confirmPasswordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}

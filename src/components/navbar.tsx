@@ -19,6 +19,21 @@ const navigation = [
     },
     { name: "HDx Consulting", href: "/hdxconsulting" },
     { name: "Hakeela Margin Portal", href: "/signup" }
+  { name: "About us", href: "/about" },
+  { name: "Blog", href: "/blog" },
+  {
+    name: "Initiatives ▼",
+    href: "",
+    children: [
+      { name: "Hakeela Margin Internship", href: "/marginportal" },
+      { name: "Hakeela Special Needs And Tech", href: "" },
+      { name: "Hakeela Fund", href: "" },
+      { name: "HDx Consulting", href: "/hdxconsulting" },
+      { name: "Hakeela Tech Hub", href: "" }
+    ]
+  },
+  { name: "HDx Consulting", href: "/hdxconsulting" },
+  { name: "Hakeela Margin Portal", href: "/marginportal" }
 ];
 
 export default function Navbar() {
