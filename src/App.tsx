@@ -10,6 +10,7 @@ import MarginPortal from "./pages/HMP/marginportal";
 import Login from "./pages/HMP/login";
 import ResetPassword from "./pages/HMP/resetpassword";
 import { AuthProvider } from "./components/AuthProvider";
+import Dashboard from "./pages/HMP/dashboard";
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/login" element={<Login/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/marginportal" element={<MarginPortal/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
       </AuthProvider>
   )

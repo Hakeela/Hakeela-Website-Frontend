@@ -18,7 +18,7 @@ const navigation = [
         ]
     },
     { name: "HDx Consulting", href: "/hdxconsulting" },
-    { name: "Hakeela Margin Portal", href: "/signup" }
+    { name: "Hakeela Margin Portal", href: "/signup" },
   { name: "About us", href: "/about" },
   { name: "Blog", href: "/blog" },
   {

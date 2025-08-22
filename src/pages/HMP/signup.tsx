@@ -44,8 +44,6 @@ export default function SignUp() {
     }}
 };
 
-
-
   return (
     <div className="signupage">
             <div className="leftsign">
