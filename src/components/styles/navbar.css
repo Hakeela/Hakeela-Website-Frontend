@@ -50,6 +50,7 @@
 .navbar__avatar img {
   border-radius: 30%;
   height: 50px;
+  margin-right: 30px;
 }
 
 /* ===== Optional: keep centre menu truly centred on wide screens ===== */
