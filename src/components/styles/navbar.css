@@ -1,84 +1,71 @@
-/* ====================================================== */
-/* ============== 1. CSS VARIABLES & RESET ============== */
-/* ====================================================== */
-:root {
-  --primary-color: #0000b8;
-  --text-color: #333333;
-  --text-color-light: #6b6b6b;
-  --border-color: #e0e0e0;
-  --background-color: #ffffff;
-  --nav-height: 60px;
-  --transition-speed: 0.3s;
-}
-
-.navbar, .navbar ul, .navbar li {
+/* ===== Reset small things we don't want from the browser ===== */
+.navbar ul,
+.navbar li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* ====================================================== */
-/* ================= 2. NAVBAR CONTAINER ================ */
-/* ====================================================== */
+/* ===== The nav bar container ===== */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  min-height: var(--nav-height);
-  background: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
-  position: relative;
-  width: 100%;
+  display: flex;                 /* row layout */
+  align-items: center;           /* vertically center children */
+  justify-content: space-between;/* logo | center links | avatar */
+  padding: 0 2rem;               /* horizontal breathing room */
+  height: 60px;                  /* whatever fits your design */
+  border-bottom: 1px ;      /* the blue line */
+  background: #ffffff;
   box-sizing: border-box;
+  border-bottom:1px solid #000000;
 }
 
-/* ====================================================== */
-/* =============== 3. LOGO & AVATAR ================= */
-/* ====================================================== */
+/* ===== Center list ===== */
+.navbar__list {
+  display: flex;
+  gap: 2.5rem;                   /* space between each link */
+  font-size: 0.9rem;
+}
+
+.navbar__link {
+  color: #6b6b6b;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar__link:hover {
+  color: #000000;
+}
+
+/* ===== Logo & avatar images ===== */
 .navbar__logo img,
 .navbar__avatar img {
   display: block;
-  height: 36px;
+  height: 40px;                 /* scale to fit; adjust if needed */
   width: auto;
 }
 
+/* Make avatar round like the shot */
 .navbar__avatar img {
   border-radius: 30%;
   height: 50px;
 }
 
-/* ====================================================== */
-/* =============== 4. NAVIGATION LINKS ================ */
-/* ====================================================== */
+/* ===== Optional: keep centre menu truly centred on wide screens ===== */
+/* You only need this if the logo or avatar widths vary a lot. */
 .navbar__list {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.9rem;
-  flex: 1;
-  justify-content: center;
+  flex: 1 1 auto;               /* allow it to grow/shrink */
+  justify-content: center;      /* push links to true centre */
 }
 
-.navbar__link {
-  color: var(--text-color-light);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+.navbar__item {
+  position: relative;
 }
 
-.navbar__link:hover {
-  color: var(--primary-color);
-}
-
-/* ====================================================== */
-/* ================= 5. DROPDOWN MENU =================== */
-/* ====================================================== */
 .navbar__dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .dropdown-toggle {
@@ -87,185 +74,39 @@
   font: inherit;
   color: inherit;
   cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.dropdown-icon {
-  transition: transform 0.2s ease;
-}
-
-.dropdown-icon--open {
-  transform: rotate(180deg);
 }
 
 .dropdown-menu {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--background-color);
-  min-width: 220px; /* Wider for longer text */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   padding: 8px 0;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+  border-radius: 6px;
 }
 
-/* Show on hover for DESKTOP only */
-.navbar__dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu--open {
-  display: block;
+.dropdown-menu li {
+  list-style: none;
 }
 
 .dropdown-item {
   display: block;
-  padding: 8px 16px;
-  color: var(--text-color);
+  padding: 10px 16px;
+  color: #333;
   text-decoration: none;
   white-space: nowrap;
-  font-size: 0.9rem;
 }
 
 .dropdown-item:hover {
-  background-color: #f9f9f9;
-  color: var(--primary-color);
+  background-color: #f1f1f1;
 }
 
-
-/* ====================================================== */
-/* ================= 6. MOBILE STYLES =================== */
-/* ====================================================== */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0 1rem;
-  }
-
-  /* --- Hamburger Toggle --- */
-  .navbar__toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1100; /* Above the mobile menu */
-  }
-  .navbar__toggle-icon {
-    color: var(--text-color);
-    /* Removed the rotate transform */
-  }
-
-  /* --- Mobile Menu Container (THIS IS THE MAIN FIX) --- */
-  .navbar__list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    
-    /* --- Positioning and Padding Fix --- */
-    width: 94%; /* Doesn't touch the edges */
-    left: 3%; /* Centers the 94% width */
-    top: calc(var(--nav-height) + 5px); /* Small gap from top */
-    border-radius: 8px; /* Nicer look */
-
-    background: var(--background-color);
-    position: absolute;
-    padding: 1rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
-    z-index: 1000;
-
-    /* --- Animation --- */
-    transform: translateY(-10px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
-  }
-
-  .navbar__list--open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .navbar__item {
-    width: 100%;
-  }
-
-  .navbar__link, .dropdown-toggle {
-    font-size: 1rem;
-    padding: 0.75rem 0;
-    width: 100%;
-    justify-content: space-between;
-  }
-  
-  /* --- Mobile Dropdown --- */
-  .navbar__dropdown:hover .dropdown-menu {
-    display: none;
-  }
-  
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border: none;
-    background: #f9f9f9;
-    border-radius: 6px;
-    padding-left: 1rem;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
-  }
-
-  .dropdown-menu--open {
-    display: block;
-    max-height: 500px;
-    opacity: 1;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  .dropdown-item {
-    padding: 0.75rem 0;
-  }
-  
-  .navbar__avatar {
-    display: none;
-  }
+/* Show dropdown on hover */
+.navbar__dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-/* ====================================================== */
-/* ================== 7. TABLET STYLES ================== */
-/* ====================================================== */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navbar {
-    padding: 0 1.5rem;
-  }
-  .navbar__list {
-    gap: 1.2rem;
-    font-size: 0.85rem;
-  }
-  .navbar__logo img {
-    height: 32px;
-  }
-}
-
-/* ====================================================== */
-/* ================= 8. DESKTOP STYLES ================== */
-/* ====================================================== */
-@media (min-width: 1025px) {
-  .navbar {
-    padding: 0 2rem;
-  }
-  .navbar__list {
-    gap: 2rem;
-  }
-  .navbar__logo img {
-    height: 40px;
-  }
-}

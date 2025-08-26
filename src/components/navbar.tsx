@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, ChevronDown, X } from "lucide-react"; // Import the X icon
 import "./styles/navbar.css";
 
 const navigation = [
@@ -37,91 +35,44 @@ const navigation = [
 ];
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState < string | null > (null);
+  return (
+    <nav className="navbar">
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-        if (isMenuOpen) setOpenDropdown(null); // Close dropdowns when menu closes
-    };
+      <Link to="/home" className="navbar__logo">
+        <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
+      </Link>
 
-    const toggleDropdown = (name: string) => {
-        setOpenDropdown(openDropdown === name ? null : name);
-    };
-
-    return (
-        <nav className="navbar">
-            <Link to="/home" className="navbar__logo">
-                <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
-            </Link>
-
-            <button
-                className="navbar__toggle"
-                onClick={toggleMenu}
-                aria-label="Toggle navigation menu"
-                aria-expanded={isMenuOpen}
-            >
-                {/* --- THIS IS THE ICON SWAP --- */}
-                {isMenuOpen ? (
-                    <X className="navbar__toggle-icon" size={24} />
-                ) : (
-                    <Menu className="navbar__toggle-icon" size={24} />
-                )}
-            </button>
-
-            <ul className={`navbar__list ${isMenuOpen ? 'navbar__list--open' : ''}`}>
-                {navigation.map(item => (
-                    <li key={item.name} className="navbar__item">
-                        {item.children ? (
-                            <div className="navbar__dropdown">
-                                <button
-                                    className="navbar__link dropdown-toggle"
-                                    aria-haspopup="true"
-                                    aria-expanded={openDropdown === item.name}
-                                    onClick={() => toggleDropdown(item.name)}
-                                >
-                                    {item.name}
-                                    <ChevronDown
-                                        className={`dropdown-icon ${openDropdown === item.name ? 'dropdown-icon--open' : ''}`}
-                                        size={16}
-                                    />
-                                </button>
-                                <ul className={`dropdown-menu ${openDropdown === item.name ? 'dropdown-menu--open' : ''}`}>
-                                    {item.children.map(sub => (
-                                        <li key={sub.name}>
-                                            <Link
-                                                to={sub.href}
-                                                className="dropdown-item"
-                                                onClick={() => {
-                                                    setIsMenuOpen(false);
-                                                    setOpenDropdown(null);
-                                                }}
-                                            >
-                                                {sub.name}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ) : (
-                            <Link
-                                to={item.href}
-                                className="navbar__link"
-                                onClick={() => {
-                                    setIsMenuOpen(false);
-                                    setOpenDropdown(null);
-                                }}
-                            >
-                                {item.name}
-                            </Link>
-                        )}
+      <ul className="navbar__list">
+        {navigation.map(item => (
+          <li key={item.name} className="navbar__item">
+            {item.children ? (
+              <div className="navbar__dropdown">
+                <button className="navbar__link dropdown-toggle">
+                  {item.name}
+                </button>
+                <ul className="dropdown-menu">
+                  {item.children.map(sub => (
+                    <li key={sub.name}>
+                      <Link to={sub.href} className="dropdown-item">
+                        {sub.name}
+                      </Link>
                     </li>
-                ))}
-            </ul>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <Link to={item.href} className="navbar__link">
+                {item.name}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
 
-            <Link to="/" className="navbar__avatar">
-                <img src="/Imabong.png" alt="Profile avatar" />
-            </Link>
-        </nav>
-    );
+
+      <Link to="/" className="navbar__avatar">
+        <img src="/Imabong.png" alt="Profile avatar" />
+      </Link>
+    </nav>
+  );
 }
