@@ -14,9 +14,9 @@ export default function Dashboard() {
                     <img src="/Imabong.png" alt="Profile avatar" />
                 </Link>
             </nav>
-            <div>
+            <h1>
                 Dashboard
-            </div>
+            </h1>
             <Footer/>
         </div>
     )
