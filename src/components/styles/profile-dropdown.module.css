@@ -188,3 +188,19 @@
   font-size: 12px;
   color: #6b7280;
 }
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between image and name */
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-weight: 500;
+}

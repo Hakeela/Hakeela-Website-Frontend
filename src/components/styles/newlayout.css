@@ -1,0 +1,66 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Top-level layout: sidebar + main */
+.layout {
+  display: flex;
+  height: 100vh; /* full viewport */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main column: navbar + content */
+.main {
+  flex: 1;                /* take remaining horizontal space */
+  display: flex;
+  flex-direction: column;  /* stack navbar + content vertically */
+  min-height: 0;           /* critical: allows .content to shrink */
+}
+
+/* Navbar at top */
+.navbar {
+  height: 64px;
+  flex-shrink: 0;         /* don’t shrink */
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+}
+
+/* Content fills remaining space */
+.content {
+  flex: 1;                /* fill remaining vertical space */
+  min-height: 0;          /* critical for overflow */
+  overflow: auto;         /* scrolling works */
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+}
+
+.main {
+  margin-left: 200px; /* leave space for fixed sidebar */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
