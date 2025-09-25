@@ -8,15 +8,13 @@ const navigation = [
     name: "Initiatives ▼",
     href: "",
     children: [
-      { name: "Hakeela Margin Internship", href: "/marginportal" },
       { name: "Hakeela Special Needs And Tech", href: "" },
       { name: "Hakeela Fund", href: "" },
-      { name: "HDx Consulting", href: "/hdxconsulting" },
       { name: "Hakeela Tech Hub", href: "" }
     ]
   },
-  { name: "HDx Consulting", href: "/hdxconsulting" },
-  { name: "Hakeela Margin Portal", href: "/marginportal" }
+  { name: "HakStudios", href: "/hdxconsulting" },
+  { name: "Hakeela Margin Internship", href: "/marginportal" }
 ];
 
 export default function Navbar() {
