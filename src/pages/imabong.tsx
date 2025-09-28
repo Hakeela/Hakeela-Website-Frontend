@@ -2,7 +2,7 @@ import './styling/landingpage.css'
 import { Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function LandingPage() {
+export default function Imabong() {
     return (
         <div className="landingpage">
             {/* <div className="background">

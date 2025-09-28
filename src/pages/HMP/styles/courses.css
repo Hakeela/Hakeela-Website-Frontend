@@ -1,0 +1,70 @@
+.csection1{
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.cs1div{
+    background-color: white;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.cs1divtext{
+    display: flex;
+    margin-top: 5px;
+}
+.cs1divtext p{
+    font-size: 12px;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+.csection2{
+    display: flex;
+    margin-bottom: 30px;
+}
+.csection2 button{
+    margin-left: auto;
+    background-color: rgba(0, 0, 184, 1);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.csection2 h2{
+    color: rgba(0, 0, 184, 1);
+}
+.csection3{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.cs3div{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cs3div img{
+    height: 200px;
+}
+.cs3div h3{
+    color: rgba(0, 0, 184, 1);
+    text-align: left;
+}
+.cs3div p{
+    font-size: 10px;
+    text-align: left;
+}
+.cs3div button{
+    margin-top: 30px;
+    color: rgba(0, 0, 184, 1);
+    background-color: white;
+    border:1px solid rgba(0, 0, 184, 1);
+    border-radius: 12px;
+}

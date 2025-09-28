@@ -1,0 +1,40 @@
+.certificates{
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.certdiv1{
+    background-color: rgba(0, 0, 184, 1);
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+.certdiv1 h1{
+    margin-bottom: 10px;
+}
+.certdiv1 p{
+    font-weight: 200;
+    font-size: 13px;
+}
+.certdiv2{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.certdiv2 p{
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.certdiv2 h4{
+    margin: 5px 0;
+}
+.certdiv3{
+    background-color: rgba(240, 20, 20, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    border-left: 2px solid rgba(240, 20, 20, 1);
+}

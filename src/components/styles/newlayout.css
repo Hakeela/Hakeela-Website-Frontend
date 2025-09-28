@@ -46,7 +46,7 @@ html, body {
   flex: 1;                /* fill remaining vertical space */
   min-height: 0;          /* critical for overflow */
   overflow: auto;         /* scrolling works */
-  background-color: #f9fafb;
+  background-color: whitesmoke;
   padding: 24px;
 }
 
@@ -60,7 +60,6 @@ html, body {
 
 .main {
   margin-left: 200px; /* leave space for fixed sidebar */
-  display: flex;
-  flex-direction: column;
+
   min-height: 100vh;
 }

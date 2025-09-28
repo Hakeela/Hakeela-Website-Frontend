@@ -15,6 +15,7 @@ import Courses from "./pages/HMP/courses";
 import Certififcates from "./pages/HMP/certificates";
 import Portfolio from "./pages/HMP/portfolio";
 import Profile from "./pages/HMP/profile";
+import Imabong from "./pages/imabong";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
+          <Route path="/imabong" element={<Imabong/>}/>
           <Route path="/marginportal" element={<MarginPortal/>}/>
           <Route element={<NewLayout/>}>
             <Route path="/dashboard" element={<Dashboard/>}/>

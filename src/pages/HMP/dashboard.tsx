@@ -87,10 +87,10 @@ export default function Dashboard() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        width: "30px",       // circle size
-                        height: "30px",      // circle size
-                        borderRadius: "50%", // makes it circular
-                        backgroundColor: "rgba(247, 250, 214, 1)", // light background (adjust as needed)
+                        width: "30px",       
+                        height: "30px",      
+                        borderRadius: "50%", 
+                        backgroundColor: "rgba(247, 250, 214, 1)", 
                     }}>
                     <CreditCard size={16} color="orange" strokeWidth={2}/>
                 </div>

@@ -84,22 +84,11 @@ export function Navbar({ currentPage, className }: NavbarProps) {
           }}
         >
           <Bell style={{ height: "20px", width: "20px", color: "#4b5563" }} />
-          <span
-            style={{
-              position: "absolute",
-              top: "4px",
-              right: "4px",
-              height: "12px",
-              width: "12px",
-              backgroundColor: "#ef4444",
-              borderRadius: "50%",
-            }}
-          ></span>
         </button>
 
         <ProfileDropdown/>
 
-        <Link to="/" className="navbar__avatar">
+        <Link to="/imabong" className="navbar__avatar">
             <img src="/Imabong.png" alt="Profile avatar" />
         </Link>
       </div>

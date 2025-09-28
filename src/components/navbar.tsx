@@ -53,7 +53,7 @@ export default function Navbar() {
       </ul>
 
 
-      <Link to="/" className="navbar__avatar">
+      <Link to="/imabong" className="navbar__avatar">
         <img src="/Imabong.png" alt="Profile avatar" />
       </Link>
     </nav>
