@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
 
-      <Link to="/home" className="navbar__logo">
+      <Link to="/" className="navbar__logo">
         <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
       </Link>
 

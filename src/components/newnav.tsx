@@ -1,6 +1,6 @@
 "use client"
 
-import { Search, Bell} from "lucide-react"
+import { Bell} from "lucide-react"
 import ProfileDropdown from "./profiledropdown"
 import { Link } from "react-router-dom"
 
@@ -26,39 +26,6 @@ export function Navbar({ currentPage, className }: NavbarProps) {
       <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <span style={{ fontSize: "20px", fontWeight: "600", color: "#111827" }}>{currentPage}</span>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div style={{ flex: 1, maxWidth: "384px", margin: "0 32px", marginLeft: "auto"  }}>
-        <div style={{ position: "relative"}}>
-          <Search
-            style={{
-              position: "absolute",
-              left: "12px",
-              top: "50%",
-              transform: "translateY(-50%)",
-              color: "#9ca3af",
-              height: "16px",
-              width: "16px",
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Search"
-            style={{
-              width: "100%",
-              paddingLeft: "40px",
-              paddingRight: "12px",
-              paddingTop: "8px",
-              paddingBottom: "8px",
-              backgroundColor: "#f9fafb",
-              border: "1px solid #e5e7eb",
-              borderRadius: "6px",
-              fontSize: "14px",
-              outline: "none",
-            }}
-          />
         </div>
       </div>
 

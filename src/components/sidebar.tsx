@@ -1,5 +1,7 @@
 import { BookMarked, Award, BriefcaseBusiness, LogOut, User, LayoutGrid} from "lucide-react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { signOut } from "firebase/auth"
+import { auth } from "../firebase/firebase"
 
 interface SidebarProps {
   activePage: string
@@ -38,6 +40,15 @@ export function Sidebar({ activePage, onPageChange, className }: SidebarProps) {
     },
   ]
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth)
+      navigate("/marginportal") // 👈 redirect after logout (change to your route)
+    } catch (error) {
+      console.error("Error signing out:", error)
+    }
+  }
+
   return (
     <aside
       className={className}
@@ -54,10 +65,10 @@ export function Sidebar({ activePage, onPageChange, className }: SidebarProps) {
     >
       <div style={{ padding: "24px" }}>
 
-        <Link to="/home" className="navbar__logo">
+        <div className="navbar__logo">
           <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo"
                 style={{height:"30px"}} />
-        </Link>
+        </div>
         {/* Navigation Items */}
         <nav style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop:"20px"}}>
           {navigationItems.map((item) => {
@@ -114,6 +125,7 @@ export function Sidebar({ activePage, onPageChange, className }: SidebarProps) {
           }}
         >
           <button
+          onClick={handleLogout}
             style={{
               display: "flex",
               alignItems: "center",
