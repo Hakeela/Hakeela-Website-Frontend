@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title>Hakeela Waitlist</title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen md:min-h-[90vh] px-4 py-8">
+
+    <div id="form-page" class="bg-white p-4 sm:p-6 rounded-lg shadow-md w-full max-w-6xl md:h-[600px] md:bg-cover md:bg-center flex flex-col md:flex-row md:gap-8 md:items-center" style="background-image: url('background.jpg');">
+        <div class="flex flex-col items-center justify-center md:w-1/2 mb-6 md:mb-0">
+        <img src="hakeela logo.png" alt="Hakeela Logo" class="mx-auto w-32 h-16 object-contain mb-4"/>
+        <div>
+            <h3 class="mx-auto px-10 py-2 text-sm font-poppins font-medium uppercase tracking-widest border-2 border-blue-300 rounded-3xl shadow-lg shadow-blue-400 w-fit">AVAILABLE IN EARLY 2026</h3>
+            <img src="early access.png" alt="" class="mx-auto w-52 h-32 object-contain md:hidden"/>
+            <h2 class="hidden md:block text-4xl md:text-5xl text-gray-800 font-bold font-poppins text-center mt-6">Get Early Access</h2>
+        </div>
+
+        <h1 class="text-lg sm:text-xl md:hidden text-gray-800 font-bold font-poppins text-center">EARLY ACCESS</h1>
+        
+        <p class="text-xs sm:text-sm text-center mb-6 text-gray-600">Be amongst the first to experience our AI powered Edtech<br class="hidden md:block"/> learning platform for people of all backgrounds and abilities.</p>
+        </div>
+
+        <!--waitlist form-->
+        <div class="md:w-1/2">
+            <div class="bg-white rounded-lg p-6">
+            <form id="waitlist-form" class="space-y-4">
+            
+                <div class="flex flex-col space-y-4">
+                <input type="text" id="fullName" name="name" required minlength="3" placeholder="Full Name" pattern="[A-Za-z\s]+" title="Full Name must be at least 3 characters and can only contain letters and spaces" class="mt-1 block w-full px-3 py-2 border-2 border-blue-400 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                
+                
+                <input type="email" id="email" name="email" required placeholder="Email address" class="mt-1 block w-full px-3 py-2 border-2 border-blue-400 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                
+                <!-- Country and State text inputs - stack on mobile, side by side on desktop -->
+                <div class="flex flex-col md:flex-row gap-4">
+                  <input type="text" id="country" name="country" placeholder="Country" required minlength="2" pattern="[A-Za-z\s]+" title="Country must be at least 2 characters and can only contain letters and spaces" class="md:flex-1 mt-1 px-3 py-2 border-2 border-blue-400 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                  <input type="text" id="state-desktop" name="state-desktop" placeholder="State/Province" required minlength="2" pattern="[A-Za-z\s\-]+" title="State/Province must be at least 2 characters and can only contain letters, spaces, and hyphens" class="md:flex-1 mt-1 px-3 py-2 border-2 border-blue-400 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+            </div>
+
+            <div>
+                
+            </div>   
+            <input type="text" id="support" name="support" required minlength="2" placeholder="Do you have special need or require learning support?" pattern="[A-Za-z\s]+" title="This field can only contain letters and spaces (e.g., 'Yes' or 'No')" class="mt-1 block w-full px-3 py-2 border-2 border-blue-400 rounded-3xl shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" >         
+
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-3xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Join Waitlist</button>
+        </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank you page -->
+    <div id="thank-you-page" class="md:fixed md:inset-0 md:flex md:items-center md:justify-center md:bg-cover md:bg-center p-4 sm:p-6 w-full" style="background-image: url('background.jpg'); display: none;">
+        <div class="bg-white rounded-lg shadow-md p-6 w-full max-w-md">
+        <img src="hakeela logo.png" alt="Hakeela Logo" class="mx-auto w-32 h-16 object-contain mb-4"/>
+        <h1 class="text-xl sm:text-2xl text-gray-800 font-bold font-poppins text-center mb-6">You're on the Waitlist</h1>
+            <p class="text-xs sm:text-sm text-center mb-6">You have successfully secured your spot. Excited? <br>
+                 Feel free to refer your friends.
+            </p>
+        
+        <div class="bg-blue-100 border-2 border-blue-400 rounded-3xl px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-center gap-2">
+            <p class="text-sm sm:text-base font-poppins text-gray-800">Join our WhatsApp community</p>
+            <a href="https://chat.whatsapp.com/https://chat.whatsapp.com/D7qgscAIHcnBYhkGxenoKj" target="_blank" class="inline-flex items-center bg-green-500 text-white p-2 rounded-full hover:bg-green-600">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9.879 21.75 10.93 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12.001 2m0 18c-1.41 0-2.73-.36-3.88-.99l-.28-.15-2.89.44.44-2.89-.15-.28C4.36 14.73 4 13.41 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
