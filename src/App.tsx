@@ -16,6 +16,8 @@ import Certififcates from "./pages/HMP/certificates";
 import Portfolio from "./pages/HMP/portfolio";
 import Profile from "./pages/HMP/profile";
 import Imabong from "./pages/imabong";
+import ProtectedRoute from "./components/ProtectedRoute";
+import CheckYourEmail from "./pages/HMP/check-your-email";
 
 
 const App = () => {
@@ -30,11 +32,12 @@ const App = () => {
             </Route>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/check-your-email" element={<CheckYourEmail/>}/>
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/imabong" element={<Imabong/>}/>
           <Route path="/marginportal" element={<MarginPortal/>}/>
           <Route element={<NewLayout/>}>
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
             <Route path="/courses" element={<Courses/>}/>
             <Route path="/certificates" element={<Certififcates/>}/>
             <Route path="/portfolio" element={<Portfolio/>}/>

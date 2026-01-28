@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import './styles/signup.css';
-import { logIn } from "../../firebase/authService";
+import { logIn, logOut, resendVerificationEmail } from "../../firebase/authService";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -22,14 +25,39 @@ export default function Login() {
     setLoading(true);
 
     try {
-      await logIn(email, password);
-      navigate("/dashboard");
-    } catch (error: unknown) {
-      if (error instanceof Error) alert(error.message);
-      else alert("An unknown error occurred.");
-    } finally {
-      setLoading(false);
+    // 1️⃣ Log user in
+    const user = await logIn(email, password);
+
+    // 2️⃣ Get user profile from Firestore
+    const userDoc = await getDoc(doc(db, "users", user.uid));
+    const userData = userDoc.data();
+
+    if (!userData?.emailVerified) {
+      // 🔁 Resend verification email automatically
+      await resendVerificationEmail(user);
+
+      // Log user out
+      await logOut();
+
+      alert(
+        "Your email is not verified yet. " +
+        "We’ve resent a verification email. Please check your inbox."
+      );
+      navigate("/check-your-email");
+      return;
     }
+
+    // 4️⃣ Verified → allow access
+    navigate("/dashboard");
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      alert(error.message);
+    } else {
+      alert("An unknown error occurred.");
+    }
+  } finally {
+    setLoading(false);
+  }
   };
 
   const isButtonDisabled = !email || !password || loading;

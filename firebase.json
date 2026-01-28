@@ -7,8 +7,23 @@
   },
   "functions": [
     {
-      "source": "functions",
       "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ],
+      "source": "functions"
+    },
+    {
+      "source": "hakeela-functions",
+      "codebase": "hakeela-functions",
+      "disallowLegacyRuntimeConfig": true,
       "ignore": [
         "node_modules",
         ".git",

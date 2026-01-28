@@ -1,7 +1,7 @@
 .signupage{
     display: flex;
     width: 100vw;
-    height: 100vh;
+
 }
 .leftsign,
 .rightsign{
@@ -114,7 +114,7 @@ input, select {
 }
 .rightcontent{
     margin-right: 40px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 .rightsign img{
     height: 50px;

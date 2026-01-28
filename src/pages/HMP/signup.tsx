@@ -27,21 +27,33 @@ export default function SignUp() {
     return;
   }
   try {
-    await signUp(email, password, {
+    const user = await signUp(email, password, {
       fullName,
       gender,
       phoneNumber,
       referralSource,
     });
-    navigate("/dashboard");
+
+    // 2️⃣ Send verification email
+    await fetch("/api/auth/sendVerificationEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: user.email,
+        userId: user.uid,
+      }),
+    });
+
+    // 3️⃣ Redirect user
+    navigate("/check-your-email");
   } catch (error: unknown) {
     if (error instanceof Error) {
-        console.error("Signup failed:", error.message);
-        alert(error.message);
+      console.error("Signup failed:", error.message);
+      alert(error.message);
     } else {
-        console.error("Signup failed:", error);
-        alert("An unknown error occurred");
-    }}
+      alert("An unknown error occurred");
+    }
+  }
 };
 
   return (
@@ -87,6 +99,30 @@ export default function SignUp() {
                     <option>Friend</option>
                     <option>Ad</option>
                     <option>Other</option>
+                </select>
+
+                <label>Are you from a low income background?</label>
+                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                    <option>Select option</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label>Do you identify as someone with special needs?</label>
+                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                    <option>Select option</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <label>If yes, please specify:</label>
+                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                    <option>Select option</option>
+                    <option>Visually Impaired</option>
+                    <option>Speech Impared</option>
+                    <option>Hearing Impaired</option>
+                    <option>Not Applicable</option>
+                    <option>Others</option>
                 </select>
 
                 <label>Password</label>
