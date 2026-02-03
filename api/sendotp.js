@@ -34,12 +34,15 @@ export default async function handler(req, res) {
     });
 
     // Send OTP email
-    await sendgrid.send({
+    const [response] = await sendgrid.send({
       to: email,
       from: "hello.wgdtafrica@gmail.com", // MUST be verified in SendGrid
       subject: "Your Password Reset Code",
       text: `Your OTP code is ${otp}. It expires in 10 minutes.`,
     });
+
+    console.log("SendGrid status:", response.statusCode);
+    console.log("SendGrid headers:", response.headers);
 
     return res.status(200).json({ success: true, message: "OTP sent successfully" });
   } catch (err) {

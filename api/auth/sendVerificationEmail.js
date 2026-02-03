@@ -15,6 +15,8 @@ const db = getFirestore();
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
+  console.log("APP_URL:", process.env.APP_URL);
+
   try {
     if (req.method !== "POST") {
       return res.status(405).json({ success: false, message: "Method not allowed" });
@@ -40,7 +42,7 @@ export default async function handler(req, res) {
     const verifyUrl = `${process.env.APP_URL}/verify-email?token=${token}&uid=${userId}`;
 
     // Send verification email
-    await sendgrid.send({
+    const [response] = await sendgrid.send({
       to: email,
       from: "hello.wgdtafrica@gmail.com", // verified sender
       subject: "Confirm your email address",
