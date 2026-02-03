@@ -16,6 +16,8 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
   console.log("APP_URL:", process.env.APP_URL);
+  console.log("🔥 sendVerificationEmail API hit");
+  console.log("Body:", req.body);
 
   try {
     if (req.method !== "POST") {
