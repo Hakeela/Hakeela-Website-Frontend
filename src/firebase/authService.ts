@@ -34,6 +34,7 @@ export const signUp = async (
 
   const user = userCredential.user;
 
+  
   await setDoc(doc(db, "users", user.uid), {
   uid: user.uid,
   email,

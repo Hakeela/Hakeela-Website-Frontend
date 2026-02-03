@@ -1,5 +1,6 @@
 import { initializeApp, getApps, cert } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
+import { getAuth } from "firebase-admin/auth";
 
 if (!getApps().length) {
   const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || '{}');
@@ -9,6 +10,7 @@ if (!process.env.FIREBASE_SERVICE_ACCOUNT) {
   initializeApp({ credential: cert(serviceAccount) });
 }
 const db = getFirestore();
+const auth = getAuth();
 
 export default async function handler(req, res) {
   try {
@@ -36,15 +38,22 @@ export default async function handler(req, res) {
     }
 
     // Mark email as verified
+    // 1️⃣ Update Firebase Auth
+    await auth.updateUser(uid, {
+      emailVerified: true,
+    });
+
+    // 2️⃣ Update verification record
     await docRef.update({
       verified: true,
       verifiedAt: new Date(),
     });
 
-    // OPTIONAL: update user record
+    // 3️⃣ Update Firestore user profile
     await db.collection("users").doc(uid).update({
       emailVerified: true,
     });
+
 
     return res.status(200).send("Email verified successfully 🎉");
   } catch (err) {
