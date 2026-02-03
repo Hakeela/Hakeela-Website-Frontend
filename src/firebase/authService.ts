@@ -35,11 +35,12 @@ export const signUp = async (
   const user = userCredential.user;
 
   await setDoc(doc(db, "users", user.uid), {
-    email,
-    ...profileData,
-    emailVerified: false, // 🔔 important
-    createdAt: new Date(),
-  });
+  uid: user.uid,
+  email,
+  ...profileData,
+  emailVerified: false,
+  createdAt: new Date(),
+});
 
   return user;
 };

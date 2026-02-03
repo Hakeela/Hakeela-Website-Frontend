@@ -16,6 +16,9 @@ export default function SignUp() {
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   const [email, setEmail] = useState("");
   const [referralSource, setReferralSource] = useState("");
+  const [lowIncome, setLowIncome] = useState("");
+  const [specialNeeds, setSpecialNeeds] = useState("");
+  const [specialNeedsType, setSpecialNeedsType] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
@@ -32,6 +35,9 @@ export default function SignUp() {
       gender,
       phoneNumber,
       referralSource,
+      lowIncome: "",
+      specialNeeds: "",
+      specialNeedsType: ""
     });
 
     // 2️⃣ Send verification email
@@ -102,21 +108,21 @@ export default function SignUp() {
                 </select>
 
                 <label>Are you from a low income background?</label>
-                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                <select  value={lowIncome} onChange={(e) => setLowIncome(e.target.value)}>
                     <option>Select option</option>
                     <option>Yes</option>
                     <option>No</option>
                 </select>
 
                 <label>Do you identify as someone with special needs?</label>
-                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                <select  value={specialNeeds} onChange={(e) => setSpecialNeeds(e.target.value)}>
                     <option>Select option</option>
                     <option>Yes</option>
                     <option>No</option>
                 </select>
 
                 <label>If yes, please specify:</label>
-                <select  value={referralSource} onChange={(e) => setReferralSource(e.target.value)}>
+                <select  value={specialNeedsType} onChange={(e) => setSpecialNeedsType(e.target.value)}>
                     <option>Select option</option>
                     <option>Visually Impaired</option>
                     <option>Speech Impared</option>
