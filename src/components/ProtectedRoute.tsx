@@ -14,8 +14,16 @@ export default function ProtectedRoute({ children }: { children: JSX.Element }) 
     const checkVerification = async () => {
       if (!user) return setVerified(false);
 
-      const userDoc = await getDoc(doc(db, "users", user.uid));
-      setVerified(userDoc.data()?.emailVerified === true);
+      // Prefer the Auth user's emailVerified flag; fall back to Firestore flag if missing
+      const authVerified = (user as any).emailVerified === true;
+      try {
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        const firestoreVerified = userDoc.exists() && userDoc.data()?.emailVerified === true;
+        setVerified(authVerified || firestoreVerified);
+      } catch (err) {
+        console.error("Error reading user doc for verification check:", err);
+        setVerified(authVerified);
+      }
     };
 
     checkVerification();

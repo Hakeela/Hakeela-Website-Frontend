@@ -1,7 +1,8 @@
-import { BookMarked, Award, BriefcaseBusiness, LogOut, User, LayoutGrid} from "lucide-react"
+import { BookMarked, Award, BriefcaseBusiness, LogOut, User, LayoutGrid } from "lucide-react"
 import { useNavigate } from "react-router-dom"
 import { signOut } from "firebase/auth"
 import { auth } from "../firebase/firebase"
+import { useEffect, useState } from "react"
 
 interface SidebarProps {
   activePage: string
@@ -11,6 +12,17 @@ interface SidebarProps {
 
 export function Sidebar({ activePage, onPageChange, className }: SidebarProps) {
   const navigate = useNavigate()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
+  }, [])
+
+  // hide the sidebar entirely on small screens to avoid duplicated header/logo
+  if (isMobile) return null
 
   const navigationItems = [
     {
@@ -65,21 +77,24 @@ export function Sidebar({ activePage, onPageChange, className }: SidebarProps) {
     >
       <div style={{ padding: "24px" }}>
 
-        <div className="navbar__logo">
-          <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo"
-                style={{height:"30px"}} />
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start" }}>
+          <div className="navbar__logo">
+            <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" style={{ height: "30px" }} />
+          </div>
         </div>
-        {/* Navigation Items */}
-        <nav style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop:"20px"}}>
+
+        {/* Navigation Items (desktop only) */}
+        <nav style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "20px" }}>
           {navigationItems.map((item) => {
             const Icon = item.icon
             const isActive = item.name === activePage
             return (
               <button
                 key={item.name}
-                onClick={() => {
+                  onClick={() => {
                   onPageChange(item.name)
-                  navigate(item.href)}}
+                  navigate(item.href)
+                }}
                 style={{
                   display: "flex",
                   alignItems: "center",

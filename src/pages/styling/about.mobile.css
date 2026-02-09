@@ -1,0 +1,61 @@
+@media (max-width: 768px) {
+  .aboutpage{
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .aboutus{
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 1.25rem;
+    margin-top: 20px;
+    text-align: left;
+  }
+  .aboutus p{ text-align: left; }
+  .aboutus h1{ font-size: 22px; margin-top: 8px; }
+  .aboutus button{ margin-top: 12px; }
+
+  .aboutsection2{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    gap: 16px;
+    padding: 0 0.5rem;
+  }
+  .aboutsection2 img{
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+  .aboutsection2 div{ width: 100%; }
+
+  .aboutsection3{ padding: 0 0.75rem; }
+  .aboutsection3 h2{ font-size: 20px; }
+
+  .whatwedo{ flex-direction: column; gap: 14px; padding: 0 0.75rem; width: 100%; }
+  .tophalf{ gap: 12px; }
+  .wedo{ width: 100%; }
+
+  .aboutsection4{ flex-direction: column; padding: 0 0.75rem; gap: 14px; }
+  .stories{ width: 100%; height: auto; }
+  .stories img{ width: 100%; height: auto; object-fit: cover; }
+  .storiesdiv p{ font-size: 13px; }
+
+  .aboutsection5{
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 30px;
+  }
+  .aboutsection5 img{ position: static; width: 80%; height: auto; margin-top: 8px; }
+  .aboutsection5 h1{ font-size: 20px; text-align: left; }
+
+  /* Layout team members in a single horizontal row with horizontal scrolling if needed */
+  .team{ display: flex; flex-direction: row; gap: 8px; padding: 0 0.5rem; flex-wrap: nowrap; overflow-x: auto; justify-content: center; align-items: flex-start; }
+
+  /* Each member card stacks content vertically and centers text below the image */
+  .team > div{ display: flex; flex-direction: column; align-items: center; text-align: center; flex: 0 0 80px; max-width: 90px; }
+  .circle-background{ width: 80px; height: 80px; }
+  .circle-background img{ height: 80px; width: auto; border-radius: 50%; }
+
+  .aboutpage h2{ font-size: 18px; margin-top: 1rem; }
+}

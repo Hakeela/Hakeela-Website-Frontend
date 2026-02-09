@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./styles/check-your-email.css";
 import { auth } from "../../firebase/firebase";
 import { db } from "../../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -28,7 +29,7 @@ export default function CheckYourEmail() {
   }, [navigate]);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "80px" }}>
+    <div className="check-email">
       <h1>Check your email 📧</h1>
       <p>
         We sent you a verification link.

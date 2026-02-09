@@ -7,75 +7,110 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
 }
-/*.background{
-      position: relative;
-  max-width: 1440px;
-  margin: 0 auto;
-  width: 100%;
+
+/* Background decorations are not used on mobile; kept out for clarity. */
+
+/* Responsive styles for mobile screens */
+@media (max-width: 768px) {
+  .landingpage {
+    padding: 12px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .landingpageimage {
+    width: 72px;
+    height: 72px;
+    margin-top: 12px !important;
+  }
+  .landingpageimage img {
+    width: auto;
+    height: 56px;
+    margin-bottom: 0;
+  }
+  .landingpage h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 8px 0 !important;
+  }
+  .landingpage p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 12px;
+    margin-top: 8px !important;
+  }
+  .chat-prompt {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    align-items: center;
+    margin-top: 12px !important;
+  }
+  .chat-input {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.95rem;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: transparent;
+  }
+  .chat-button {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: 4px;
+  }
+  .action-buttons-container {
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px !important;
+  }
+  /* First group: 3 on first row, 2 on second */
+  .action-button-group:not(.bottom-group) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 3px auto ;
+    justify-items: center;
+  }
+  /* Bottom group: 2 buttons on one row */
+  .action-button-group.bottom-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 3px auto;
+    justify-items: center;
+    margin-top: 2px;
+  }
+  /* End-group: two buttons at the very end */
+  .action-button-group.end-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 3px auto;
+    justify-items: center;
+    margin-top: 2px;
+  }
+  .action-button {
+    font-size: 14px;
+    margin: 3px auto;
+    border-radius: 999px;
+    padding: 8px 16px; /* slightly smaller padding */
+    justify-self: center;
+  }
+  #p{
+    font-size: 12px;
+    margin-top: 12px !important;
+    text-align: center;
+    padding: 0 12px;
+  }
 }
-.bg{
-    z-index: 0;
-}
-.bg1{
-    width: 130px;
-    height: 154px;
-    top: 475px;
-    left: 1934px;
-    position: absolute;
-}
-.bg2{
-    width: 142px;
-    height: 122px;
-    top: -70px;
-    left: 885px;
-    position: absolute;
-}
-.bg3{
-    width: 119px;
-    height: 102px;
-    top: 926px;
-    left: 331px;
-    position: absolute;
-}
-.bg4{
-    width: 119px;
-    height: 102px;
-    top: 656px;
-    left: 1466px;
-    position: absolute;
-}
-.bg5{
-    width: 130px;
-    height: 154px;
-    left: 1700px;
-    position: absolute;
-}
-.bg6{
-    width: 105px;
-    height: 125px;
-    top: 926px;
-    left: 1291px;
-    position: absolute;
-}
-.bg7{
-    width: 105px;
-    height: 125px;
-    top: 417px;
-    left: -0px;
-    position: absolute;
-}
-.bg8{
-    width: 105px;
-    height: 125px;
-    top: 46px;
-    left: 281px;
-    position: absolute;
-}*/
 .landingpageimage{
     background-color: rgba(255, 202, 6, 1);
     border-radius: 50%;
@@ -190,5 +225,13 @@
 }
 #p{
     font-size: 12px;
-    margin-top: 120px;
 }
+
+@media (min-width: 769px) {
+  #p{
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+ 

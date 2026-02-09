@@ -1,5 +1,6 @@
 .blog-card {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -59,4 +60,37 @@
 .read-more-button:hover {
   background-color: rgba(0, 0, 184, 1);;
   color: white;
+}
+
+/* Center card content on small screens */
+@media (max-width: 768px) {
+  .blog-card {
+    margin: 0 auto;
+    max-width: 340px;
+    text-align: center;
+  }
+
+  .blog-image {
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .blog-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .blog-meta {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .read-more-button {
+    margin: 0 auto;
+    display: inline-block;
+  }
 }

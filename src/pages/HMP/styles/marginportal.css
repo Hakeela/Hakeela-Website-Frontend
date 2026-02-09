@@ -206,3 +206,151 @@
     font-size: 12px;
     color: rgba(30, 30, 30, 0.6);
 }
+
+/* Responsive: stack layout nicely on small screens */
+@media (max-width: 768px) {
+    .navbarr{
+        padding: 10px 16px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+    .navbar__logo img{
+        height: 40px;
+    }
+    .navbottons{
+        margin-left: auto;
+        gap: 8px;
+    }
+    .navbottons button{
+        width: 70px;
+        height: 32px;
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .marginportalsection1{
+        flex-direction: column;
+        padding: 20px 16px 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .margintext{
+        margin: 0;
+        max-width: 520px;
+        padding: 0 8px;
+    }
+    .marginportalsection1 h1{
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    #p1{
+        font-size: 14px;
+    }
+    .margintext button{
+        width: 220px;
+    }
+    .margindivs{
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        margin-top: 12px;
+        padding: 8px;
+    }
+    .marginn{
+        padding-right: 0;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    #marginimg{
+        height: 320px;
+        max-width: 90%;
+        object-fit: contain;
+    }
+
+    .ssection{
+        width: calc(100% - 32px);
+        height: auto;
+        padding: 20px;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .ssection h2{
+        font-size: 1.4rem;
+    }
+    .ssection img{
+        position: absolute;
+        height: 12%;
+        right: 8px;
+        top: 8px;
+        margin-top: 0;
+    }
+
+    .gain{
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .gain img{
+        height: 180px;
+        padding: 12px;
+    }
+    /* Center each card's image and text on mobile */
+    .gain > div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 12px;
+        width: calc(100% - 32px);
+        max-width: 520px;
+        box-sizing: border-box;
+        background-color: white;
+    }
+    .gain h3{
+        padding-left: 0;
+        margin-top: 8px;
+    }
+    .gain p{
+        padding-left: 0;
+        margin: 8px 12px;
+    }
+    .gain button{
+        margin-left: 0;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        align-self: center;
+    }
+
+    .courses{
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .course{
+        width: 100%;
+        max-width: 360px;
+    }
+    .courses img{
+        height: 140px;
+    }
+
+    .pa4, .pa3, .pa2{
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .marginportalsection1 h1{
+        font-size: 1.6rem;
+    }
+    .margindivs{
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    .margindivs div p.pa2{
+        font-size: 18px;
+    }
+}

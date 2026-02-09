@@ -69,8 +69,10 @@ export default function Home() {
                 </div>
 
                 <div className="homepartners">
-                    <h4>Partners</h4>
-                    <img id="hand" src="/handshake.png" alt=""/>
+                                        <h4 style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'8px'}}>
+                                            Partners
+                                            <img id="hand" src="/handshake.png" alt="" style={{height:'24px',width:'24px'}}/>
+                                        </h4>
                     <img src="waff-removebg.png" alt=""/>
                     <img src="falf-removebg.png" alt=""/>
                     <img id="ept" src="experteens-removebg.png" alt=""/>
@@ -83,8 +85,8 @@ export default function Home() {
                 <div className="imgdiv">
                     <img src="/IMG_7688-removebg-preview 1.png" alt="" />
                 </div>
-                <div>
-                    <h3>
+                <div className="homesection3-text-mobile">
+                    <h3 className="homesection3-heading-desktop">
                         “Through our SNAT Platform; we are<br/> 
                         building a world were the visually<br/>
                         impaired, speech impaired, or hearing<br/> 
@@ -93,6 +95,13 @@ export default function Home() {
                         all this using A.I”<br/>
                         - Victor Eyo
                     </h3>
+                    {/* Mobile only: new heading and black paragraph */}
+                    <h2 className="homesection3-heading-mobile">
+                        Empowering Accessibility Through A.I
+                    </h2>
+                    <p className="homesection3-paragraph-mobile">
+                        “Through our SNAT Platform; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments, and we are doing all this using A.I”<br/>- Victor Eyo
+                    </p>
                     <button>Learn More</button>
                 </div>
             </section>
@@ -170,7 +179,8 @@ export default function Home() {
                         <div className="circle-background">
                             <img src="/toyin-removebg-preview 1.png" alt="" />
                         </div>
-                        <h5>Oluwatoyin Joy Yerokun</h5>
+
+                        <h5>Oluwatoyin Yerokun</h5>
                         <p>Information/Project Director</p>
                     </div>
                     <div>
@@ -206,7 +216,7 @@ export default function Home() {
                 </div>
 
                 <div className="ima">
-                    <div className="imabong">
+                    <div className="imabong-full">
                         <img src="/IMG_5568 1.png" alt="" />
                     </div>
                     <div className="chatbot">
