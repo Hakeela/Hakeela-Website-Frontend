@@ -17,11 +17,14 @@ export default function Courses() {
                     }}>
                         <BookMarked size={16} color="rgba(0, 0, 184, 1)" strokeWidth={2}/>
                     </div>
-                    <div className="cs1divtext">
-                        <h1>3</h1>
+                        
+                    
+                <div className="cs1divtext">
+                        <h2>3</h2>
                         <p>Enrolled Courses</p>
                     </div>
                 </div>
+                
 
                 <div className="cs1div">
                     <div style={{
@@ -36,7 +39,7 @@ export default function Courses() {
                         <CircleCheckBig size={16} color="rgba(10, 200, 64, 1)" strokeWidth={2}/>
                     </div>
                     <div className="cs1divtext">
-                        <h1>14</h1>
+                        <h2>14</h2>
                         <p>Completed Lessons</p>
                     </div>
                 </div>
@@ -54,7 +57,7 @@ export default function Courses() {
                         <Trophy size={16} color="rgba(138, 56, 245, 1)" strokeWidth={2}/>
                     </div>
                     <div className="cs1divtext">
-                        <h1>24h</h1>
+                        <h2>24h</h2>
                         <p>Total Study Time</p>
                     </div>
                 </div>
@@ -72,7 +75,7 @@ export default function Courses() {
                         <Clock4 size={16} color="rgba(255, 202, 6, 1)" strokeWidth={2}/>
                     </div>
                     <div className="cs1divtext">
-                        <h1>85%</h1>
+                        <h2>85%</h2>
                         <p>Average Score</p>
                     </div>
                 </div>

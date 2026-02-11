@@ -40,13 +40,16 @@ export default function Imabong() {
                     <Link to='/home'><button className="action-button outlined">Learn</button></Link>
                     <Link to='/home'><button className="action-button filled">Get Internships</button></Link>
                     <Link to='/home'><button className="action-button outlined">Get mentorships</button></Link>
-                    <Link to='/home'><button className="action-button filled">Choose a tech career</button></Link>
-                    <Link to='/home'><button className="action-button outlined">Upskill</button></Link>
                 </div>
 
                 <div className="action-button-group bottom-group">
                     <Link to='/home'><button className="action-button outlined">Special needs and tech</button></Link>
                     <Link to='/home'><button className="action-button filled">Learn more</button></Link>
+                </div>
+
+                <div className="action-button-group end-group">
+                    <Link to='/home'><button className="action-button filled">Choose a tech career</button></Link>
+                    <Link to='/home'><button className="action-button outlined">Upskill</button></Link>
                 </div>
             </div>
             <p id='p'>By messaging Imaobong, you agree our Terms and have read our Privacy Policy.</p>

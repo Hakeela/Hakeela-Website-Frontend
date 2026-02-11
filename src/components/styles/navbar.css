@@ -17,6 +17,9 @@
   background: #ffffff;
   box-sizing: border-box;
   border-bottom:1px solid #000000;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 /* ===== Center list ===== */
@@ -53,11 +56,58 @@
   margin-right: 30px;
 }
 
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hamburger button - hidden on desktop */
+.navbar__hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.navbar__hamburger .bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #333;
+  margin: 3px 0;
+  transition: transform 0.2s ease;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 8px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  padding: 12px;
+  z-index: 1000;
+  min-width: 200px;
+}
+.mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+.mobile-menu a { display: block; padding: 8px 6px; color: #111; text-decoration: none; }
+.mobile-menu a:hover { background: #f3f4f6; border-radius: 6px; }
+
 /* ===== Optional: keep centre menu truly centred on wide screens ===== */
 /* You only need this if the logo or avatar widths vary a lot. */
 .navbar__list {
   flex: 1 1 auto;               /* allow it to grow/shrink */
   justify-content: center;      /* push links to true centre */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .navbar__list { display: none; }
+  .navbar__hamburger { display: block; }
+  .navbar__logo img { height: 36px; }
+  .navbar__avatar img { height: 40px; margin-right: 0; }
 }
 
 .navbar__item {

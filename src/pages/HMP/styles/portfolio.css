@@ -1,0 +1,40 @@
+/* Global layout adjustments for portfolio page */
+
+/* Ensure portfolio text is visible on all breakpoints */
+.portfolio-root .portfolio-text,
+.portfolio-root .portfolio-text p {
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .portfolio-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .portfolio-root .logos {
+    justify-content: center;
+  }
+
+  .portfolio-root .portfolio-text {
+    align-items: center;
+  }
+
+  /* Ensure text is visible on all backgrounds */
+  .portfolio-root .portfolio-text,
+  .portfolio-root .portfolio-text p {
+    color: #000;
+  }
+
+  .portfolio-root .portfolio-text p {
+    margin: 0;
+  }
+
+  .portfolio-root .portfolio-btn {
+    align-self: center;
+  }
+}

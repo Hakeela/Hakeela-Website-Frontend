@@ -42,33 +42,16 @@ export default function Certififcates() {
     return(
         <div className="certificates">
             <div className="certdiv1">
-                <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "60px",       
-                        height: "60px",     
-                        borderRadius: "10%", 
-                        backgroundColor: "rgba(255, 202, 6, 1)", 
-                        marginBottom: "10px"
-                    }}>
-                    <Trophy color='black' size={32} strokeWidth={2}/>
-                </div>
+              <div className="icon-large">
+                <Trophy className="icon-svg" color='black' strokeWidth={2}/>
+              </div>
                 <h1>Your Certificate Journey</h1>
                 <p>Your name, {displayName}, will appear on your certificates. <Link to={"/profile"} style={{textDecoration:'underline', color:'white', fontWeight:'600'}}><span>Click here to change your name</span></Link> on your<br/>profile page.</p>
             </div>
 
             <div className="certdiv2">
-                <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "30px",       
-                        height: "30px",     
-                        borderRadius: "50%", 
-                        backgroundColor: "#EEF", 
-                    }}>
-                    <FileBadge size={16} color="rgba(0, 0, 184, 1)" strokeWidth={2}/>
+                <div className="icon-small">
+                  <FileBadge className="icon-svg" color="rgba(0, 0, 184, 1)" strokeWidth={2}/>
                 </div>
                 <h4>Your Certificate Journey</h4>
                 <p>Certificates will be sent via email after completion of your registered program or course, and after payment for your certificate.</p>
@@ -82,16 +65,8 @@ export default function Certififcates() {
             </div>
 
             <div className="certdiv2">
-                <div style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        width: "30px",       
-                        height: "30px",     
-                        borderRadius: "50%", 
-                        backgroundColor: "#EEF", 
-                    }}>
-                    <BriefcaseBusiness size={16} color="rgba(0, 0, 184, 1)" strokeWidth={2}/>
+                <div className="icon-small">
+                  <BriefcaseBusiness className="icon-svg" color="rgba(0, 0, 184, 1)" strokeWidth={2}/>
                 </div>
                 <h4>Internship Qualification</h4>
                 <p>Only those with verified certificates can qualify for internship placements and advanced career opportunities.</p>

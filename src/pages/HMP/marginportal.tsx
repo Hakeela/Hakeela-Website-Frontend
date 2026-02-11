@@ -26,7 +26,7 @@ export default function MarginPortal() {
 
             <section className="marginportalsection1">
                 <div className="margintext">
-                    <h1>Gain In-<br/>demand tech<br/>skills for free!</h1>
+                    <h1>Gain In-demand tech<br/>skills for free!</h1>
                     <p id="p1">Upskill yourself with our various tech programs designed for people of all<br/>
                     backgrounds and abilities. Gain hands on experience and be ready to intern or<br/>
                     start entry-level positions in 8 weeks.</p>

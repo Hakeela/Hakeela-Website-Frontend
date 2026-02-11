@@ -1,27 +1,38 @@
 .csection1{
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
     margin-top: 10px;
     margin-bottom: 30px;
+    align-items: stretch;
 }
 .cs1div{
     background-color: white;
-    width: 250px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 80px;
+    box-sizing: border-box;
 }
 .cs1divtext{
     display: flex;
-    margin-top: 5px;
+    flex-direction: column;
+    margin-top: 0;
 }
 .cs1divtext p{
     font-size: 12px;
-    margin-top: 18px;
-    margin-left: 5px;
+    margin: 0;
+    margin-top: 2px;
 }
 .csection2{
     display: flex;
     margin-bottom: 30px;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 .csection2 button{
     margin-left: auto;
@@ -35,30 +46,38 @@
 }
 .csection2 h2{
     color: rgba(0, 0, 184, 1);
+    font-size: 20px;
+    margin: 0;
+    flex: 0 1 auto;
+    display: block;
 }
 .csection3{
     display: flex;
     gap: 50px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .cs3div{
     background-color: white;
     padding: 10px;
     border-radius: 15px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 .cs3div img{
-    height: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .cs3div h3{
     color: rgba(0, 0, 184, 1);
     text-align: left;
 }
 .cs3div p{
-    font-size: 10px;
+    font-size: 12px;
     text-align: left;
 }
 .cs3div button{
@@ -67,4 +86,23 @@
     background-color: white;
     border:1px solid rgba(0, 0, 184, 1);
     border-radius: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .csection1{ gap: 16px; }
+    .csection3{ gap: 20px; }
+    .cs3div{ max-width: 100%; }
+    .csection2{ width: 100%; }
+    .csection2 button{ margin-left: 0; margin-top: 8px; }
+}
+
+@media (max-width: 480px) {
+    .mpcourse{ padding: 12px; }
+    .csection1{ gap: 12px; }
+    .cs1div{ padding: 8px; }
+    .cs1div h2{ font-size: 18px; }
+    .cs3div p{ font-size: 11px; }
+    .csection2{ flex-direction: column; align-items: flex-start; }
+    .csection2 button{ width: 100%; padding: 12px; border-radius: 10px; }
 }

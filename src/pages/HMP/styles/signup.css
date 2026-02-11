@@ -1,14 +1,14 @@
 .signupage{
-    display: flex;
-    width: 100vw;
-
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
 }
 .leftsign,
 .rightsign{
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 50vw;
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .leftsign h1{
@@ -22,9 +22,11 @@
 
 .form-container {
   max-width: 480px;
+  width: 100%;
   margin: auto;
-  padding: 5px;
+  padding: 8px;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 label {
@@ -38,17 +40,19 @@ label {
 
 input, select {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 0.7rem;
-  margin-bottom: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
   background-color: #f8f8f8;
+  box-sizing: border-box;
 }
 
 .row {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .col {
@@ -59,6 +63,13 @@ input, select {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+}
+
+/* Ensure the phone input's internal input expands to available width */
+.phone-input input,
+.phone-input .PhoneInputInput {
+  flex: 1;
+  min-width: 0;
 }
 
 .password-input {
@@ -73,10 +84,9 @@ input, select {
 .password-input .icon {
   position: absolute;
   right: 10px;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;  
-  
+  cursor: pointer;
 }
 
 .grey-icon {
@@ -91,9 +101,9 @@ input, select {
   background-color: rgba(0, 0, 184, 1);
   color: white;
   border: none;
-  padding: 0.5rem;
+  padding: 0.65rem;
   border-radius: 10px;
-  font-size: 0.7rem;
+  font-size: 0.95rem;
   cursor: pointer;
 }
 
@@ -142,4 +152,92 @@ input, select {
 .reset{
   color: rgba(0, 0, 184, 1);
   font-size: 10px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 900px) {
+  .signupage {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  /* Place right panel above the form on narrow screens */
+  .rightsign {
+    order: 0;
+  }
+
+  .leftsign {
+    order: 1;
+  }
+
+  .leftsign,
+  .rightsign {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .form-container {
+    max-width: 100%;
+    padding: 12px;
+    margin: 12px auto;
+  }
+
+  .rightsign {
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 24px;
+  }
+
+  .rightcontent {
+    margin: 0 auto;
+    margin-top: 16px;
+    max-width: 540px;
+    padding: 0 12px;
+  }
+
+  .rightsign h1 {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .rightsign p {
+    font-size: 1rem;
+  }
+
+  .rightsign img {
+    height: 40px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Simplify the right pane on very small screens */
+  .rightsign {
+    display: none;
+  }
+
+  .leftsign h1 {
+    font-size: 1.2rem;
+    margin-top: 12px;
+  }
+
+  input, select, .submit-button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .form-container {
+    padding: 10px;
+    margin: 8px;
+  }
+
+  #login-text {
+    font-size: 0.75rem;
+  }
+
+  /* Stack the two-column rows vertically on very small screens */
+  .row {
+    flex-direction: column;
+  }
 }
