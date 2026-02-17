@@ -114,7 +114,7 @@ export default function Login() {
       <div className="rightsign">
         <div className="rightcontent">
           <img src="/Hakeela Logo Icon (white) 1.png" alt="" />
-          <h1>Empowering<br />the Next<br />Generation of<br />Creators and<br />Innovators</h1>
+          <h1>Empowering the Next<br />Generation of<br />Creators and<br />Innovators</h1>
           <p>At Hakeela, we equip students with practical<br />digital skills to turn ideas into impact. From<br />coding to design, our expert-led courses help<br />you learn fast, build real projects, and thrive in<br />the digital world.</p>
           <button>Join the Community ➜</button>
         </div>

@@ -1,5 +1,6 @@
 import { Accessibility, FolderClosed, GraduationCap, Instagram, Linkedin, Speech, X } from 'lucide-react'
 import './styling/about.css'
+import './styling/about.mobile.css'
 
 export default function About() {
     return(

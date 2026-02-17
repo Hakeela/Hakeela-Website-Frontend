@@ -11,17 +11,20 @@
     text-align: center;
 }
 .subscribe{
-    background-color: rgba(0, 0, 184, 1);
-    width: 70em;
-    height: 13em;
-    border-radius: 10px;
-    margin-top: 50px;
-    margin-bottom: 70px;
+  background-color: rgba(0, 0, 184, 1);
+  width: calc(100% - 120px);
+  max-width: 1100px;
+  height: auto;
+  padding: 32px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 .subscribe h2{
-    color: white;
-    margin-top: 40px;
-    font-size: 2em;
+  color: white;
+  margin-top: 0;
+  font-size: 2em;
+  line-height: 1.2;
 }
 .subscribe p{
     color: rgba(255, 255, 255, 0.7);
@@ -31,9 +34,9 @@
 
 }
 .form{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 .subscribe-form{
     display: flex;
@@ -86,11 +89,14 @@
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding-bottom: 4px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .tabs-buttons {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
@@ -156,6 +162,8 @@
   gap: 30px;
   padding: 0 60px;
   margin-bottom: 0;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .bottomblog{
   display: flex;
@@ -163,4 +171,79 @@
   padding: 0 60px;
   margin-top: 30px;
   margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .subscribe{
+    width: calc(100% - 80px);
+    padding: 28px;
+  }
+  .topblog, .bottomblog{
+    padding: 0 30px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .subscribe{
+    width: calc(100% - 32px);
+    padding: 20px;
+    margin-top: 24px;
+    border-radius: 8px;
+  }
+
+  .subscribe h2{
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .subscribe p{
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .subscribe-form{
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .tabs-header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabs-dropdown{
+    width: 100%;
+  }
+
+  .tabs-dropdown select{
+    width: 100%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+  }
+
+  .tabs-buttons{
+    gap: 12px;
+  }
+
+  /* Slight inset for tab buttons on small screens */
+  .tabs-buttons{
+    margin-left: 8px;
+  }
+
+  .tabs-header{
+    padding-left: 16px;
+    padding-right: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .topblog, .bottomblog{
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 18px;
+    align-items: center;
+  }
 }

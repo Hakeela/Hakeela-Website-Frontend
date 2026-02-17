@@ -14,6 +14,7 @@ interface UserData {
 export default function Dashboard() {
   const [user, loading] = useAuthState(auth);
   const [userData, setUserData] = useState<UserData | null>(null);
+  const [showDebug, setShowDebug] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -40,6 +41,16 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <button onClick={() => setShowDebug(!showDebug)} style={{ marginBottom: 12, padding: '6px 10px', cursor: 'pointer' }}>
+          {showDebug ? 'Hide' : 'Show'} Auth Debug
+        </button>
+      </div>
+      {showDebug && (
+        <pre style={{ background: '#111827', color: '#fff', padding: 12, borderRadius: 8, overflowX: 'auto' }}>
+          {JSON.stringify({ user: user ?? null, userData }, null, 2)}
+        </pre>
+      )}
       <div className="dsection1">
         <div className="ds1text">
             <h1>

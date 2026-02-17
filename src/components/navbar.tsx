@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "./styles/navbar.css";
 
 const navigation = [
@@ -18,9 +19,10 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="navbar">
-
       <Link to="/" className="navbar__logo">
         <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
       </Link>
@@ -52,10 +54,47 @@ export default function Navbar() {
         ))}
       </ul>
 
+      <div className="navbar__right">
+        <Link to="/imabong" className="navbar__avatar">
+          <img src="/Imabong.png" alt="Profile avatar" />
+        </Link>
 
-      <Link to="/imabong" className="navbar__avatar">
-        <img src="/Imabong.png" alt="Profile avatar" />
-      </Link>
+        <button
+          className={`navbar__hamburger ${open ? 'open' : ''}`}
+          aria-label="Toggle menu"
+          onClick={() => setOpen(!open)}
+        >
+          <span className="bar" />
+          <span className="bar" />
+          <span className="bar" />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="mobile-menu">
+          <ul>
+            {navigation.map(item => (
+              <li key={item.name} className="mobile-item">
+                {item.children ? (
+                  <details>
+                    <summary>{item.name}</summary>
+                    <ul>
+                      {item.children.map(sub => (
+                        <li key={sub.name}>
+                          <Link to={sub.href} onClick={() => setOpen(false)}>{sub.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ) : (
+                  <Link to={item.href} onClick={() => setOpen(false)}>{item.name}</Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

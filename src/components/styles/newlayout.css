@@ -63,3 +63,31 @@ html, body {
 
   min-height: 100vh;
 }
+
+/* Mobile tweaks: remove left margin from main and hide fixed sidebar so content starts at left edge */
+@media (max-width: 767px) {
+  .layout {
+    display: block;
+    height: auto;
+  }
+
+  .sidebar {
+    display: none;
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    min-height: auto;
+  }
+
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
