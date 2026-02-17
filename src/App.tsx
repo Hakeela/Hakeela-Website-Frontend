@@ -18,6 +18,7 @@ import Profile from "./pages/HMP/profile";
 import Imabong from "./pages/imabong";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CheckYourEmail from "./pages/HMP/check-your-email";
+import Snat from "./pages/snat";
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/resetpassword" element={<ResetPassword/>}/>
           <Route path="/imabong" element={<Imabong/>}/>
           <Route path="/marginportal" element={<MarginPortal/>}/>
+          <Route path="/snat" element={<Snat/>}/>
           <Route element={<NewLayout/>}>
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard/></ProtectedRoute>}/>
             <Route path="/courses" element={<Courses/>}/>

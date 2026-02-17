@@ -6,6 +6,7 @@ import "react-phone-number-input/style.css";
 import './styles/signup.css';
 import { signUp } from "../../firebase/authService";
 import { useNavigate } from "react-router-dom";
+import { sendEmailVerification } from "firebase/auth";
 
 export default function SignUp() {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -35,20 +36,13 @@ export default function SignUp() {
       gender,
       phoneNumber,
       referralSource,
-      lowIncome: "",
-      specialNeeds: "",
-      specialNeedsType: ""
+      lowIncome,
+      specialNeeds,
+      specialNeedsType
     });
 
     // 2️⃣ Send verification email
-    await fetch("/api/auth/sendVerificationEmail", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: user.email,
-        userId: user.uid,
-      }),
-    });
+    await sendEmailVerification(user);
 
     // 3️⃣ Redirect user
     navigate("/check-your-email");

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import './styles/signup.css';
-import { logIn, logOut, resendVerificationEmail } from "../../firebase/authService";
+import { logIn, logOut, resendVerificationEmail} from "../../firebase/authService";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 

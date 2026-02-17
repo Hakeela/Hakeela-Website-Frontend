@@ -2,24 +2,12 @@ import { auth, db } from "./firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  sendEmailVerification,
   signOut,
   type User
 } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import type { UserProfile } from "../types";
-
-export const resendVerificationEmail = async (user: User) => {
-  await fetch("/api/auth/sendVerificationEmail", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      email: user.email,
-      userId: user.uid,
-    }),
-  });
-};
-
-
 
 export const signUp = async (
   email: string,
@@ -43,9 +31,14 @@ export const signUp = async (
   createdAt: new Date(),
 });
 
+  await sendEmailVerification(user);
+
   return user;
 };
 
+export const resendVerificationEmail = async (user: User) => {
+  await sendEmailVerification(user);
+};
 
 export const logIn = async (email: string, password: string): Promise<User> => {
   const userCredential = await signInWithEmailAndPassword(auth, email, password);

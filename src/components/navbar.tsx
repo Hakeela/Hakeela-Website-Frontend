@@ -6,11 +6,11 @@ const navigation = [
     { name: "Blog", href: "/blog" },
   {
     name: "Initiatives ▼",
-    href: "",
+    href: "#",
     children: [
-      { name: "Hakeela Special Needs And Tech", href: "" },
-      { name: "Hakeela Fund", href: "" },
-      { name: "Hakeela Tech Hub", href: "" }
+      { name: "Hakeela Special Needs And Tech", href: "/snat" },
+      { name: "Hakeela Fund", href: "#" },
+      { name: "Hakeela Tech Hub", href: "#" }
     ]
   },
   { name: "HakStudios", href: "/hdxconsulting" },
