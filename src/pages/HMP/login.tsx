@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 import './styles/signup.css';
 import { logIn, logOut, resendVerificationEmail} from "../../firebase/authService";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "../../firebase/firebase";
+
 
 
 export default function Login() {
@@ -29,10 +28,9 @@ export default function Login() {
     const user = await logIn(email, password);
 
     // 2️⃣ Get user profile from Firestore
-    const userDoc = await getDoc(doc(db, "users", user.uid));
-    const userData = userDoc.data();
+    await user.reload();
 
-    if (!userData?.emailVerified) {
+    if (!user?.emailVerified) {
       // 🔁 Resend verification email automatically
       await resendVerificationEmail(user);
 
