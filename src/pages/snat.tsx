@@ -1,5 +1,6 @@
 import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 
 export default function Snat() {
     return (
@@ -10,7 +11,7 @@ export default function Snat() {
                 </Link>
 
                 <div className="navbottons">
-                    <Link to="/" className="navbar__avatar">
+                    <Link to="/imabong" className="navbar__avatar">
                         <img src="/Imabong.png" alt="Profile avatar" />
                     </Link>
                 </div>
@@ -72,7 +73,41 @@ export default function Snat() {
                         </div>
                     </div>
                 </div>
+
+                <div style={{display:'flex', gap:'20px', marginTop:'50px', marginBottom:'50px'}}>
+                        <img src="./Frame 158.png" alt="" style={{height:'350px', width: '450px', margin:'0px'}}/>
+                    <div style={{alignContent:'center'}}>
+                        <h2 style={{color: 'rgba(0, 0, 184, 1)', fontSize:'1.5em'}}>
+                            “Meet 16 year old speech impaired design<br/> progidy. Just like bright, we are training<br/> and equipping young people with special<br/>
+                             needs across 4 African countries and<br/> more with tech skills”
+                        </h2>
+                        <button style={{color: 'rgba(0, 0, 184, 1)', backgroundColor:'white', border: '1px solid rgba(0, 0, 184, 1)', marginTop: '10px',  whiteSpace: 'nowrap',
+                                        borderRadius: '20px', width: '100px', height: '20px', fontSize: '10px', overflow: 'visible', textOverflow: 'ellipsis'}}>Read More</button>
+                    </div>
+                </div>
+
+                <h2 style={{color: 'rgba(0, 0, 184, 1)'}}>Courses</h2>
+                <p>View our list of special courses</p>
+                <div className="gain">
+                    <div>
+                        <img src="./Frame 247.png" alt="" style={{height:'250px'}} />
+                        <h3>Introduction to Computer</h3>
+                        <p>Begin your tech career by understanding Computer essentials</p>
+                        <button>Enroll</button>
+                    </div>
+                    <div>
+                        <img src="./Frame 248.png" alt="" style={{height:'250px'}}/>
+                        <h3>Excel for Beginners</h3>
+                        <p>Welcome to the world of charts and tables!</p>
+                        <button>Enroll</button>
+                    </div>
+                </div>
+
+                <h2 style={{color: 'rgba(0, 0, 184, 1)'}}>Impact Highlights</h2>
+                <img src="./Frame 303.png" alt="" style={{width:'95vw', height:'auto', margin:'20px'}}/>
             </section>
+
+            <Footer/>
         </div>
     )
 }

@@ -18,7 +18,7 @@ export default function MarginPortal() {
                         <button id="signupbtn">Sign Up</button>
                     </Link>
 
-                    <Link to="/" className="navbar__avatar">
+                    <Link to="/imabong" className="navbar__avatar">
                         <img src="/Imabong.png" alt="Profile avatar" />
                     </Link>
                 </div>

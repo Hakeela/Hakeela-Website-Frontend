@@ -32,7 +32,7 @@ export default function Login() {
 
     if (!user?.emailVerified) {
       // 🔁 Resend verification email automatically
-      await resendVerificationEmail(user);
+      //await resendVerificationEmail(user);
 
       // Log user out
       await logOut();

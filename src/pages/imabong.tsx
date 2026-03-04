@@ -4,55 +4,50 @@ import { Link } from 'react-router-dom';
 
 export default function Imabong() {
     return (
-        <div className="landingpage">
-            {/* <div className="background">
-                <img className="bg bg1" src="/Play.svg" alt="" />
-                <img className="bg bg2" src="/Box.svg" alt="" />
-                <img className="bg bg3" src="/Box1.svg" alt="" />
-                <img className="bg bg4" src="/Box2.svg" alt="" />
-                <img className="bg bg5" src="/Play.svg" alt="" />
-                <img className="bg bg6" src="/Play.svg" alt="" />
-                <img className="bg bg7" src="/Play.svg" alt="" />
-                <img className="bg bg8" src="/Play.svg" alt="" />
-            </div> */}
-            <div className='landingpageimage'>
-                <img src="/IMG_5568 1.png" alt="" />
-            </div>
-            <h1>Hi, I'm Imaobong!</h1>
-            <p>Your AI assistant at Hakeela. I'm here to help you navigate your tech<br/> 
-                career journey with personalized guidance and expert insights.
-            </p>
-            <div className="chat-prompt">
-                <input
-                    type="text"
-                    className="chat-input"
-                    placeholder="Not sure of the perfect tech career for you? Let’s chat"
-                />
-                <Link to='/home'>
-                    <button className="chat-button">
-                        <Send size={16} strokeWidth={2} />
-                    </button>
-                </Link>
-            </div>
-
-            <div className="action-buttons-container">
-                <div className="action-button-group">
-                    <Link to='/home'><button className="action-button outlined">Learn</button></Link>
-                    <Link to='/home'><button className="action-button filled">Get Internships</button></Link>
-                    <Link to='/home'><button className="action-button outlined">Get mentorships</button></Link>
+        <div>
+            <nav className="navbarr" style={{borderBottom:'1px solid #534f4f5d'}}>
+                <Link to="/"  style={{ color: 'rgba(0, 0, 184, 1)', textDecoration: 'none', marginRight:'auto' }}>← Back</Link>
+                <div className="navbottons">
+                    <Link to='/login'>
+                        <button>Login</button>
+                    </Link>
+                    <Link to='/signup'>
+                        <button id="signupbtn">Sign Up</button>
+                    </Link>
+                </div>
+            </nav>
+            <div className="landingpage">
+                <div className='landingpageimage'>
+                    <img src="/IMG_5568 1.png" alt="" />
+                </div>
+                <h1>Hi, I'm Imaobong!</h1>
+                <p>Your AI assistant at Hakeela. I'm here to help you navigate your tech<br/> 
+                    career journey with personalized guidance and expert insights.
+                </p>
+                <div className="chat-prompt">
+                    <input
+                        type="text"
+                        className="chat-input"
+                        placeholder="Not sure of the perfect tech career for you? Let’s chat"
+                    />
+                    <Link to='#'>
+                        <button className="chat-button">
+                            <Send size={16} strokeWidth={2} />
+                        </button>
+                    </Link>
                 </div>
 
-                <div className="action-button-group bottom-group">
-                    <Link to='/home'><button className="action-button outlined">Special needs and tech</button></Link>
-                    <Link to='/home'><button className="action-button filled">Learn more</button></Link>
+                <div className="action-buttons-container">
+                    <div className="action-button-group">
+                        <Link to='#'><button className="action-button outlined">Attach</button></Link>
+                        <Link to='#'><button className="action-button filled">Code Review</button></Link>
+                        <Link to='#'><button className="action-button outlined">Brainstorm</button></Link>
+                         <Link to='#'><button className="action-button outlined">Study Plan</button></Link>
+                        <Link to='#'><button className="action-button filled">Cover Letter</button></Link>
+                    </div>
                 </div>
-
-                <div className="action-button-group end-group">
-                    <Link to='/home'><button className="action-button filled">Choose a tech career</button></Link>
-                    <Link to='/home'><button className="action-button outlined">Upskill</button></Link>
-                </div>
+                <p id='p'>By messaging Imaobong, you agree our Terms and have read our Privacy Policy.</p>
             </div>
-            <p id='p'>By messaging Imaobong, you agree our Terms and have read our Privacy Policy.</p>
         </div>
     )
 }

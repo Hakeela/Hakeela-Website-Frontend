@@ -1,5 +1,3 @@
-"use client"
-
 import { Bell, Menu } from "lucide-react"
 import ProfileDropdown from "./profiledropdown"
 import { Link, useNavigate } from "react-router-dom"
@@ -66,9 +64,11 @@ export function Navbar({ currentPage, className }: NavbarProps) {
             </button>
           )}
 
-          <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+          {isMobile && (
+            <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
             <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" style={{ height: 30, marginRight: 8 }} />
           </Link>
+        )}
 
           <span style={{ fontSize: "20px", fontWeight: "600", color: "#111827" }}>{currentPage}</span>
         </div>

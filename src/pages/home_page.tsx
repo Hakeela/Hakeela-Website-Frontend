@@ -16,9 +16,9 @@ export default function Home() {
                 <button className="button1">Learn More</button>
 
                 <div className="homeimages1">
-                    <img src="/Image 1.png"></img>
-                    <img id="img2" src="/Image 2.png"></img>
-                    <img src="/Image 3.png"></img>
+                    <img src="/Image 1.png" alt=""></img>
+                    <img id="img2" src="/Image 2.png" alt=""></img>
+                    <img src="/Image 3.png" alt=""></img>
                 </div>
             </section>
 
@@ -114,7 +114,7 @@ export default function Home() {
 
                 <div className="homestatements">
                     <div className="statements">
-                        <img className="icons" src="/HSNAT2-removebg-preview 1.png"/>
+                        <img className="icons" src="/HSNAT2-removebg-preview 1.png"alt=""/>
                         <h3>Special Needs and Tech</h3>
                         <p>
                             Our A.I Tech designed to enhance<br/> 
@@ -126,7 +126,7 @@ export default function Home() {
                         <button>Learn More</button>
                     </div>
                     <div className="statements">
-                        <img className="icons" src="/HMI-2-removebg-preview 1.png" />
+                        <img className="icons" src="/HMI-2-removebg-preview 1.png" alt="" />
                         <h3>Margin Internship</h3>
                         <p>
                             An 8-week hybrid bootcamp (virtual and<br/> 
@@ -139,7 +139,7 @@ export default function Home() {
                         <button>Learn More</button>
                     </div>
                     <div className="statements">
-                        <img className="icons" src="/HFUND2-removebg-preview 1.png"/>
+                        <img className="icons" src="/HFUND2-removebg-preview 1.png" alt=""/>
                         <h3>Hakeela Fund</h3>
                         <p>
                             A dedicated scholarship program aimed at<br/> 
@@ -211,7 +211,7 @@ export default function Home() {
                             </p>
                             <button>Read More</button>
                         </div>
-                        <img src="/victor-removebg.png"/>
+                        <img src="/victor-removebg.png" alt=""/>
                     </div>
                 </div>
 

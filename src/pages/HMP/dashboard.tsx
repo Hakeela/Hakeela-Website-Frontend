@@ -41,6 +41,7 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard">
+    {/*}  
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <button onClick={() => setShowDebug(!showDebug)} style={{ marginBottom: 12, padding: '6px 10px', cursor: 'pointer' }}>
           {showDebug ? 'Hide' : 'Show'} Auth Debug
@@ -51,6 +52,7 @@ export default function Dashboard() {
           {JSON.stringify({ user: user ?? null, userData }, null, 2)}
         </pre>
       )}
+        */}
       <div className="dsection1">
         <div className="ds1text">
             <h1>
