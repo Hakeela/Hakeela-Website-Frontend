@@ -28,8 +28,8 @@ export default function Profile() {
     const [imageFile, setImageFile] = useState<File | null>(null)
     const [user] = useAuthState(auth)
     const [userData, setUserData] = useState<UserData | null>(null)
-    const displayName = userData?.fullName || user.displayName || "User"
-    const displayImage = userData?.profilePicture || user.photoURL || "/placeholder.png"
+    const displayName = userData?.fullName || user?.displayName || "User"
+    const displayImage = userData?.profilePicture || user?.photoURL || "/placeholder.png"
     const fileInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {

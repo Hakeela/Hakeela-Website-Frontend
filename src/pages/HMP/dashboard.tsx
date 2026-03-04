@@ -14,7 +14,6 @@ interface UserData {
 export default function Dashboard() {
   const [user, loading] = useAuthState(auth);
   const [userData, setUserData] = useState<UserData | null>(null);
-  const [showDebug, setShowDebug] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
