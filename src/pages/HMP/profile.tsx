@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, db } from "../../firebase/firebase"
 import { doc, getDoc } from "firebase/firestore"
@@ -9,6 +9,7 @@ import { updateDoc } from "firebase/firestore"
 import { updateEmail, updatePassword } from "firebase/auth"
 import PhoneInput from "react-phone-number-input";
 import { Eye, EyeOff } from "lucide-react"
+import { ProfileAvatar } from "../../components/profileavatar"
 
 interface UserData {
   fullName: string
@@ -29,6 +30,7 @@ export default function Profile() {
     const [userData, setUserData] = useState<UserData | null>(null)
     const displayName = userData?.fullName || user.displayName || "User"
     const displayImage = userData?.profilePicture || user.photoURL || "/placeholder.png"
+    const fileInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -99,15 +101,27 @@ export default function Profile() {
     return(
         <div>
             <div className="leftsign">
+                <form className="form-container" onSubmit={handleUpdate}>
                 <div className={styles.profileContainer}>
-                    <img
-                        src={imageFile ? URL.createObjectURL(imageFile) : displayImage}
-                        alt="Profile"
-                        className={styles.avatar}
+                    <ProfileAvatar
+                        imageUrl={imageFile ? URL.createObjectURL(imageFile) : displayImage}
+                        altText="Profile"
+                        onCameraClick={() => fileInputRef.current?.click()}
+                    />
+
+                    <input
+                        type="file"
+                        accept="image/*"
+                        ref={fileInputRef}
+                        style={{ display: "none" }}
+                        onChange={(e) => {
+                        if (e.target.files) {
+                            setImageFile(e.target.files[0])
+                        }
+                        }}
                     />
                     <span className={styles.userName}>{displayName}</span>
                 </div>
-                <form className="form-container" onSubmit={handleUpdate}>
                 <h1>Account Information</h1>
                 <p>Edit your personal account information</p>
                 <label>Full Name</label>
