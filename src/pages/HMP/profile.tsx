@@ -50,20 +50,14 @@ export default function Profile() {
     fetchUserData()
     }, [user])
 
-    const handleUpdate = async (e: React.FormEvent) => {
+    // Handler for name, email, phone, profile picture
+const handleUpdateProfile = async (e: React.FormEvent) => {
   e.preventDefault()
-
   if (!user) return
-
-  if (password && password !== confirmPassword) {
-    alert("Passwords do not match")
-    return
-  }
 
   let imageURL = userData?.profilePicture || ""
 
   try {
-    // Upload image if selected
     if (imageFile) {
       const imageRef = ref(storage, `profilePictures/${user.uid}`)
       await uploadBytes(imageRef, imageFile)
@@ -78,30 +72,51 @@ export default function Profile() {
       profilePicture: imageURL
     })
 
-    // Update Firebase Auth Email
+    // Update Firebase Auth Email separately if it changed
     if (email !== user.email) {
       await updateEmail(user, email)
     }
 
-    // Update Password if entered
-    if (password) {
-      await updatePassword(user, password)
-    }
-
     alert("Profile updated successfully")
-
   } catch (error: any) {
     console.error(error)
-
     if (error.code === "auth/requires-recent-login") {
-      alert("Please log out and log back in before changing email or password.")
+      alert("Please log out and log back in before changing email.")
+    }
+  }
+}
+
+// Handler only for password
+const handleUpdatePassword = async (e: React.FormEvent) => {
+  e.preventDefault()
+  if (!user) return
+
+  if (!password) {
+    alert("Please enter a new password")
+    return
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match")
+    return
+  }
+
+  try {
+    await updatePassword(user, password)
+    setPassword("")
+    setConfirmPassword("")
+    alert("Password updated successfully")
+  } catch (error: any) {
+    console.error(error)
+    if (error.code === "auth/requires-recent-login") {
+      alert("Please log out and log back in before changing password.")
     }
   }
 }
     return(
         <div>
-            <div className="leftsign">
-                <form className="form-container" onSubmit={handleUpdate}>
+            <div>
+                <form style={{backgroundColor:'white', borderRadius:'20px', padding:'30px'}} onSubmit={handleUpdateProfile}>
                 <div className={styles.profileContainer}>
                     <ProfileAvatar
                         imageUrl={imageFile ? URL.createObjectURL(imageFile) : displayImage}
@@ -114,18 +129,34 @@ export default function Profile() {
                         accept="image/*"
                         ref={fileInputRef}
                         style={{ display: "none" }}
-                        onChange={(e) => {
-                        if (e.target.files) {
-                            setImageFile(e.target.files[0])
-                        }
+                        onChange={async (e) => {
+                            if (!user) return
+                            if (e.target.files && e.target.files[0]) {
+                            const file = e.target.files[0]
+                            setImageFile(file)
+
+                            try {
+                                const imageRef = ref(storage, `profilePictures/${user.uid}`)
+                                await uploadBytes(imageRef, file)
+                                const downloadURL = await getDownloadURL(imageRef)
+                                // Update Firestore
+                                await updateDoc(doc(db, "users", user.uid), {
+                                profilePicture: downloadURL
+                                })
+                                // Update local state for instant UI update
+                                setUserData(prev => prev ? { ...prev, profilePicture: downloadURL } : null)
+                            } catch (err) {
+                                console.error("Upload failed:", err)
+                            }
+                            }
                         }}
                     />
-                    <span className={styles.userName}>{displayName}</span>
+                    <span className={styles.userName} style={{fontSize:'20px', fontWeight:'600'}}>{displayName}</span>
                 </div>
-                <h1>Account Information</h1>
-                <p>Edit your personal account information</p>
+                <h1 style={{fontSize:'20px', fontWeight:'500', marginTop:'20px'}}>Account Information</h1>
+                <p style={{fontSize:'13px'}}>Edit your personal account information</p>
                 <label>Full Name</label>
-                <input type="text" placeholder="Enter your full name" value={fullName} onChange={(e) => setFullName(e.target.value)}/>
+                <input style={{fontSize:'13px'}} type="text" placeholder="Enter your full name" value={fullName} onChange={(e) => setFullName(e.target.value)}/>
 
                 <div className="row">
                     <div className="col">
@@ -136,15 +167,19 @@ export default function Profile() {
                         onChange={(value) => setPhoneNumber(value || '')}
                         defaultCountry="NG"
                         className="phone-input"
+                        style={{fontSize:'13px'}}
                     />
                     </div>
                 </div>
 
                 <label>Email</label>
-                <input type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input style={{fontSize:'13px'}} type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
-                <button type="submit" className="submit-button">Update</button>
+                <button style={{width:'100px', borderRadius:'20px', fontSize:'13px'}} type="submit" className="submit-button">Update</button>
+                </form>
 
+
+                <form onSubmit={handleUpdatePassword}>
                 <label>Password</label>
                 <div className="password-input">
                     <input
@@ -152,6 +187,7 @@ export default function Profile() {
                     placeholder="Enter password"
                     value={password} 
                     onChange={(e) => setPassword(e.target.value)}
+                    style={{fontSize:'13px'}}
                     />
                     <span onClick={() => setPasswordVisible(!passwordVisible)} className="icon">
                     {passwordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}
@@ -165,13 +201,14 @@ export default function Profile() {
                     placeholder="Re-enter password"
                     value={confirmPassword} 
                     onChange={(e) => setConfirmPassword(e.target.value)}
+                    style={{fontSize:'13px'}}
                     />
                     <span onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)} className="icon">
                     {confirmPasswordVisible ? <Eye className="grey-icon" /> : <EyeOff className="grey-icon" />}
                     </span>
                 </div>
 
-                <button type="submit" className="submit-button">Update</button>
+                <button style={{width:'100px', borderRadius:'20px', fontSize:'13px'}} type="submit" className="submit-button">Update</button>
                 </form>
             </div>
         </div>
