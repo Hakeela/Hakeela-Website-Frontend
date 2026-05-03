@@ -457,9 +457,7 @@ margin-left: 200px;
 .imgdiv2mobile{
     background-color: rgba(0, 0, 184, 1);
     border-radius: 5px;
-    height: 200px;
-    width: 90%;
-    margin-left: 25px;
+    width: 100%;
 
 }
 
@@ -476,11 +474,12 @@ margin-left: 200px;
   padding: 0;
     border-radius: 5px;
     overflow: hidden;
-   width: 90%;
    height: auto;
    flex-shrink: 0;
-    margin-left: 22px;
     margin-top: 5px;
+    width: 80%;
+    margin: 0 auto ;
+    
 }
 
 .homesection3{
@@ -499,7 +498,7 @@ margin-left: 200px;
     padding-top: 30px;
 }
 
-.homesection3m h4{
+.homesection3m h4margin{
      text-align: center;
     padding-top: 10px;
 }
@@ -660,8 +659,8 @@ margin-left: 200px;
     margin-bottom: 60px;
 }
 .circle-background {
-  width: 150px;
-  height: 150px;
+  width: fit-content;
+  height: fit-content;
   background-color: rgba(255, 202, 6, 1);
   border-radius: 50%;
   display: flex;
@@ -891,24 +890,25 @@ margin-left: 200px;
     margin-top: 100px;
 }
 .learnmobile2{
+    display: flex;
     background-image: url('/blueBG.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 27em;
+    width: 80%;
     height: 10em;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 25px;
-    margin-right: 25px;
     margin-top: 20px;
+    margin: 0 auto;
 }
 .homelearnmobile{
+    display: flex;
     background-color: rgba(0, 0, 184, 1);
-    width: 27em;
+    width: 80%;
     height: 10em;
     border-radius: 10px;
     display: flex;
@@ -918,7 +918,8 @@ margin-left: 200px;
 }
 
 .homelearnmobile2{
-    width: 27em;
+    display: flex;
+    width: 80%;
     height: 10em;
     border-radius: 10px;
     display: flex;
