@@ -5,17 +5,18 @@ import "./styles/navbar.css";
 const navigation = [
     { name: "About us", href: "/about" },
     { name: "Blog", href: "/blog" },
+    { name: "HakStudios", href: "/hdxconsulting" },
+  { name: "HakPortal", href: "/marginportal" },
+  { name: "Hak-AbilityTech", href: "/snat" },
+
   {
     name: "Initiatives ▼",
     href: "#",
     children: [
-      { name: "Hakeela Special Needs And Tech", href: "/snat" },
       { name: "Hakeela Fund", href: "#" },
-      { name: "Hakeela Tech Hub", href: "#" }
+      { name: "HakVersity", href: "#" }
     ]
-  },
-  { name: "HakStudios", href: "/hdxconsulting" },
-  { name: "Hakeela Margin Internship", href: "/marginportal" }
+  }
 ];
 
 export default function Navbar() {
@@ -56,7 +57,7 @@ export default function Navbar() {
 
       <div className="navbar__right">
         <Link to="/imabong" className="navbar__avatar">
-          <img src="/Imabong.png" alt="Profile avatar" />
+          <img src="new_imabong.png" alt="Profile avatar" />
         </Link>
 
         <button

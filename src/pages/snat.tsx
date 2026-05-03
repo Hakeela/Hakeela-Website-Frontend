@@ -1,18 +1,19 @@
 import { Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer";
+import './styling/snat.css';
 
 export default function Snat() {
     return (
         <div>
             <nav className="navbarr">
                 <Link to="/" className="navbar__logo">
-                    <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
+                    <img src="Hakability.jpg" style={{  overflow: 'hidden' }} alt="Hakeela logo" />
                 </Link>
 
                 <div className="navbottons">
                     <Link to="/imabong" className="navbar__avatar">
-                        <img src="/Imabong.png" alt="Profile avatar" />
+                        <img src="new_imabong.png" alt="Profile avatar" />
                     </Link>
                 </div>
             </nav>
@@ -36,8 +37,8 @@ export default function Snat() {
                     </div>
                 </div>
 
-                <div className="marg" style={{marginLeft:'100px', padding:'0px'}}>
-                    <img src="/Frame 309.png" alt="" style={{height:'450px', width: '550px', margin:'0px'}} />
+                <div className="marg snat-hero-section" style={{padding:'0px'}}>
+                    <img className="snat-hero-image" src="/Frame 309.png" style={{marginLeft: '150px'}} alt="Hero section image" />
                 </div>  
             </section>
 
@@ -51,11 +52,11 @@ export default function Snat() {
                 </div>
 
                 <div className="supportt">
-                    <div className="support" style={{marginTop:'0px', width:'67em', gap:'40px', paddingLeft:'80px', paddingRight:'80px'}}>
-                        <div className="donate" style={{width:'500px'}}>
-                            <button>Support our mission</button>
+                    <div className="support snat-support-container" style={{marginTop:'0px', gap:'40px'}}>
+                        <div className="donate snat-donate-section">
+                            <button >Support our mission</button>
                             <h1>Donate</h1>
-                            <p style={{fontSize:'12px'}}>An interview with a participant from our Special needs and tech Workshop,<br/> 
+                            <p style={{fontSize:'12px' }}>An interview with a participant from our Special needs and tech Workshop,<br/> 
                             Calabar chapter which aimed to teach digital skills to young people with<br/> 
                             hearing and speech disabilities. Join Hakeela as we empower special and<br/> 
                             marginalized youth in Africa with digital skills.</p>
@@ -74,9 +75,9 @@ export default function Snat() {
                     </div>
                 </div>
 
-                <div style={{display:'flex', gap:'20px', marginTop:'50px', marginBottom:'50px'}}>
-                        <img src="./Frame 158.png" alt="" style={{height:'350px', width: '450px', margin:'0px'}}/>
-                    <div style={{alignContent:'center'}}>
+                <div style={{display:'flex', gap:'20px', marginTop:'50px', marginBottom:'50px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+                        <img className="snat-feature-image" src="./Frame 158.png" alt="Feature"/>
+                    <div className="snat-feature-text">
                         <h2 style={{color: 'rgba(0, 0, 184, 1)', fontSize:'1.5em'}}>
                             “Meet 16 year old speech impaired design<br/> progidy. Just like bright, we are training<br/> and equipping young people with special<br/>
                              needs across 4 African countries and<br/> more with tech skills”
@@ -88,14 +89,14 @@ export default function Snat() {
 
                 <h2 style={{color: 'rgba(0, 0, 184, 1)'}}>Courses</h2>
                 <p>View our list of special courses</p>
-                <div className="gain">
-                    <div>
+                <div className="gain snat-courses-grid">
+                    <div className="snat-course-card">
                         <img src="./Frame 247.png" alt="" style={{height:'250px'}} />
                         <h3>Introduction to Computer</h3>
                         <p>Begin your tech career by understanding Computer essentials</p>
                         <button>Enroll</button>
                     </div>
-                    <div>
+                    <div className="snat-course-card">
                         <img src="./Frame 248.png" alt="" style={{height:'250px'}}/>
                         <h3>Excel for Beginners</h3>
                         <p>Welcome to the world of charts and tables!</p>
@@ -104,7 +105,7 @@ export default function Snat() {
                 </div>
 
                 <h2 style={{color: 'rgba(0, 0, 184, 1)'}}>Impact Highlights</h2>
-                <img src="./Frame 303.png" alt="" style={{width:'95vw', height:'auto', margin:'20px'}}/>
+                <img className="snat-impact-image" src="./Frame 303.png" alt="Impact highlights"/>
             </section>
 
             <Footer/>

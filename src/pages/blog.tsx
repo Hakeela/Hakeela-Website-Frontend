@@ -118,7 +118,7 @@ export default function Blog() {
                             </div>
                         </div>
                      }
-                    {activeTab === 'events' && <p>This is Events content.</p>}
+                    {activeTab === 'events' && <p>No events available.</p>}
                 </div>
             </div>
         </div>

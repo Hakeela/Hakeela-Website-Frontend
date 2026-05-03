@@ -4,7 +4,8 @@ import { Eye, CircleDot, Rocket, Play } from 'lucide-react';
 
 export default function Home() {
     return(
-        <div className="homepage">
+        <>
+        <div className="homepage-desktop">
             <section className="homesection1">
                 <div className="hometexts">
                     <h1 className="hometext">"Building the Future of Tech <br/> Inclusion one community a time"</h1>
@@ -16,14 +17,14 @@ export default function Home() {
                 <button className="button1">Learn More</button>
 
                 <div className="homeimages1">
-                    <img src="/Image 1.png" alt=""></img>
+                    <img className="img1" src="/Image 1.png" alt=""></img>
                     <img id="img2" src="/Image 2.png" alt=""></img>
-                    <img src="/Image 3.png" alt=""></img>
+                    <img className="img3" src="/Image 3.png" alt=""></img>
                 </div>
             </section>
 
             <section className="homesection2">
-                <h2>Our Foundation</h2>
+                <h2 className="text-[#0000B8] text-center text-2xl font-bold">Our Foundation</h2>
                 <p className="p2">Building sustainable impact through clear vision, 
                     focused <br/> mission, and measurable objectives
                 </p>
@@ -69,9 +70,9 @@ export default function Home() {
                 </div>
 
                 <div className="homepartners">
-                                        <h4 style={{display:'flex',alignItems:'center',justifyContent:'center',gap:'8px'}}>
-                                            Partners
-                                            <img id="hand" src="/handshake.png" alt="" style={{height:'24px',width:'24px'}}/>
+                <h4 className="font-semibold mb-4">
+                Partners
+                <img id="hand" src="/handshake.png" alt="" style={{height:'24px',width:'24px'}}/>
                                         </h4>
                     <img src="waff-removebg.png" alt=""/>
                     <img src="falf-removebg.png" alt=""/>
@@ -81,70 +82,112 @@ export default function Home() {
                 </div>
             </section>
 
+             <section className="homesection5">
+                <h2 className="text-[#0000B8] text-center text-2xl font-bold">Impact+</h2>
+                <p>
+                    Measuring our global reach and the transformative effect<br/> 
+                    we're having on communities worldwide
+                </p>
+                <img src="/theMap.png" alt="" />
+            </section>
+
+
             <section className="homesection3">
+            <h2 className="text-[#0000B8] text-center text-2xl font-bold">Our Initiative</h2>
+                
+                <div className="homesection3i">
                 <div className="imgdiv">
                     <img src="/IMG_7688-removebg-preview 1.png" alt="" />
                 </div>
-                <div className="homesection3-text-mobile">
-                    <h3 className="homesection3-heading-desktop">
-                        “Through our SNAT Platform; we are<br/> 
-                        building a world were the visually<br/>
-                        impaired, speech impaired, or hearing<br/> 
-                        impaired can learn tech skills, work in<br/> 
-                        tech establishments, and we are doing<br/> 
-                        all this using A.I”<br/>
-                        - Victor Eyo
+                <div className="textdiv" style={{ marginTop: '20px' }}>
+                    <img className="icons" src="/HSNAT2-removebg-preview 1.png"alt=""/>
+                    <h3 className="homesection3-heading-desktop font-bold">
+                        Empowering <br></br>
+                        Accessibility Through A.I
                     </h3>
+
+                    <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                        “Through our Hak-AbilityTech Initiative; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments,and we are doing all this using A.I”
+                        <br></br>
+                        <br></br>- Victor Eyo
+                    </p>
                     {/* Mobile only: new heading and black paragraph */}
                     <h2 className="homesection3-heading-mobile">
                         Empowering Accessibility Through A.I
                     </h2>
                     <p className="homesection3-paragraph-mobile">
-                        “Through our SNAT Platform; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments, and we are doing all this using A.I”<br/>- Victor Eyo
+                        “Through our SNAT Platform; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments, and we are doing all this using A.I”- Victor Eyo
                     </p>
                     <button>Learn More</button>
                 </div>
+                </div>
             </section>
 
+
+
+            <section className="homesection3">
+
+            <div className="homesection3i">
+                <div className="textdiv" style={{ marginTop: '10px' }}>
+
+                    <img className="icons" src="HakStudios.png" alt=""/>
+                    <h3 className="homesection3-heading-desktop font-bold">
+                        When Inclusion Meets<br></br>
+                        Creativity
+                    </h3>
+                    <p className="flex flex-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                        We build tech talent, design meaningful solutions, write impactful stories, and teach the next generation, all through the power of inclusive innovation.
+                    </p>
+                    {/* Mobile only: new heading and black paragraph */}
+                    <h2 className="homesection3-heading-mobile">
+                        Empowering Accessibility Through A.I
+                    </h2>
+                    <p className="homesection3-paragraph-mobile">
+                        “Through our SNAT Platform; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments, and we are doing all this using A.I”- Victor Eyo
+                    </p>
+                    <button style={{ width: '150px' }}>Collaborate with us</button>
+                </div>
+                
+                <div className="imgdiv1">
+                    <img src="homeImage.png" alt="" />
+                </div>
+                
+                </div>
+            </section>
+
+            <section className="homesection3">
+                <div className="imgdiv2">
+                <h4 className="text-white" > Meet Hakportals!</h4>
+                <p className="p2">Easily launch your courses, ebooks, events, and products — and accept payments all in one place.
+                    </p>
+                    <img src="hakportals.png" alt="" />
+                    </div>
+
+
+                </section>
+
             <section className="homesection4">
-                <h2>Our Initiatives</h2>
+                <h2>Other Initiatives</h2>
                 <p className="p2">Transforming lives through innovative programs designed<br/> 
                     to create inclusive opportunities in technology
                 </p>
 
                 <div className="homestatements">
                     <div className="statements">
-                        <img className="icons" src="/HSNAT2-removebg-preview 1.png"alt=""/>
-                        <h3>Special Needs and Tech</h3>
-                        <p>
-                            Our A.I Tech designed to enhance<br/> 
-                            communication and learning for people with<br/> 
-                            special needs. SNAT is also our hybrid<br/> 
-                            bootcamp designed to empower special<br/> 
-                            needs people with tech skills
-                        </p>
-                        <button>Learn More</button>
-                    </div>
-                    <div className="statements">
-                        <img className="icons" src="/HMI-2-removebg-preview 1.png" alt="" />
-                        <h3>Margin Internship</h3>
-                        <p>
-                            An 8-week hybrid bootcamp (virtual and<br/> 
-                            physical) designed for young Africans aged<br/> 
-                            15–25, focused on building essential tech skills<br/> 
-                            in areas like Data Science, Artificial<br/> 
-                            Intelligence, Cybersecurity, Product Design,<br/> 
-                            and Software Development.
+                        <img className="icons" src="TECH_HUB.png" alt=""/>
+                        <h3>Hakeela Tech Hub</h3>
+                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                           A network of physical tech hubs across at least 10 African countries, providing young Africans with quiet, durable workspaces to learn, collaborate, innovate, and grow.
                         </p>
                         <button>Learn More</button>
                     </div>
                     <div className="statements">
                         <img className="icons" src="/HFUND2-removebg-preview 1.png" alt=""/>
                         <h3>Hakeela Fund</h3>
-                        <p>
-                            A dedicated scholarship program aimed at<br/> 
-                            providing educational sponsorships for<br/> 
-                            children and teens from marginalized<br/> 
+                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                            A dedicated scholarship program aimed at 
+                            providing educational sponsorships for 
+                            children and teens from marginalized 
                             communities across Africa.
                         </p>
                         <button>Learn More</button>
@@ -152,17 +195,9 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="homesection5">
-                <h2>Impact+</h2>
-                <p>
-                    Measuring our global reach and the transformative effect<br/> 
-                    we're having on communities worldwide
-                </p>
-                <img src="/worldmap.png" alt="" />
-            </section>
 
             <section className="homesection6">
-                <h2>Meet Our Team</h2>
+                <h2 className="text-[#0000B8] text-center text-2xl font-bold">Meet Our Team</h2>
                 <p>
                     Check out the unique individuals that are<br/> 
                     powering these amazing initiatives
@@ -197,45 +232,41 @@ export default function Home() {
                         <h5>Comfort Alphonsus</h5>
                         <p>Chief Graphics Designer</p>
                     </div>
+                        
+                        <div>
+                        <div className="circle-background">
+                            <img src="micheal_headshot.png" alt="" />
+                        </div>
+                        <h5>Nwogbaga Michael</h5>
+                        <p>Product Designer</p>
+                    </div>
+
                 </div>
 
-                <div className="maindiv">
-                    <div className="homediv">
-                        <div>
-                            <h3>"From community project <br/>
-                                to a global organization"
-                            </h3>
-                            <p>
-                                The history of Hakeela (fka Wegodigiteens) and why it<br/>
-                                started as told by the founder
-                            </p>
-                            <button>Read More</button>
-                        </div>
-                        <img src="/victor-removebg.png" alt=""/>
-                    </div>
-                </div>
 
                 <div className="ima">
+
+                     <div className="chatbot">
+                        <h2 className="flex flex-start text-[#0000B8] font-bold">
+                            NOT SURE WHICH TECH SKILL
+                            TO LEARN?
+                        </h2>
+                        <h4 className="text-gray-700 flex flex-start text-sm  max-w-sm mx-auto px-10">
+                             if you’re struggling to find the right tech program or 
+                             don’t know where to start, chat with Imaobong — our A.I. chatbot ready to guide you.
+                        </h4>
+                        <button>Chat with Imabong</button>
+                    </div>
+
                     <div className="imabong-full">
-                        <img src="/IMG_5568 1.png" alt="" />
+                        <img src="new_imabong.png" alt="" />
                     </div>
-                    <div className="chatbot">
-                        <h3>
-                            Having difficulties finding the right tech <br/>
-                            program for yourself? You don't know<br/>
-                            what tech skill to learn?
-                        </h3>
-                        <h3>
-                            Chat with Imabong - our A.I Chatbot <br/>
-                            she speaks sign language too!
-                        </h3>
-                        <button>Chat</button>
-                    </div>
+                   
                 </div>
 
                 <div className="learn">
                     <div className="homelearn">
-                        <h2>"Learn a Tech Skill with <br/>
+                        <h2 className="font-bold">"Learn a Tech Skill with <br/>
                             Hakeela today"
                         </h2>
                         <button>Get Started</button>
@@ -268,5 +299,11 @@ export default function Home() {
                 </div>
             </section>
         </div>
+
+        {/* Mobile-only section - Design from scratch here */}
+        <div className="homepage-mobile">
+            {/* Add your mobile design here */}
+        </div>
+        </>
     )
 }

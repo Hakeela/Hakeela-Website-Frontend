@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/BlogCard.css';
 
 interface BlogCardProps {
@@ -30,7 +31,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
         <p className="blog-description">{description}</p>
 
-        <button className="read-more-button">Read More</button>
+        <Link to="/blog-detail" className="read-more-button">Read More</Link>
       </div>
     </div>
   );

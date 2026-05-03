@@ -7,7 +7,7 @@ export default function MarginPortal() {
         <div>
             <nav className="navbarr">
                 <Link to="/" className="navbar__logo">
-                    <img src="/Hakeela Full Logo (Blue) 1.png" alt="Hakeela logo" />
+                    <img src="Hakportal.jpg" style={{ overflow: 'hidden' }} alt="Hakeela logo" />
                 </Link>
 
                 <div className="navbottons">
@@ -19,7 +19,7 @@ export default function MarginPortal() {
                     </Link>
 
                     <Link to="/imabong" className="navbar__avatar">
-                        <img src="/Imabong.png" alt="Profile avatar" />
+                        <img src="new_imabong.png" alt="Profile avatar" />
                     </Link>
                 </div>
             </nav>
