@@ -3,7 +3,7 @@ import { Eye, CircleDot, Rocket, Play } from 'lucide-react';
 export default function HomeMobile() {
     return (
     <div className='w-full flex justify-center bg-gray-200'>
-        <div className="min-h-screen flex flex-col items-center gap-6 px-6">
+        <div className="w-full max-w-sm min-h-screen flex flex-col items-center gap-6 px-6">
   
   <h1 className="text-center text-3xl sm:text-4xl font-bold text-[#0000B8] mt-20 max-w-md mx-auto px-4">
     "Building the Future of Tech Inclusion one community a time"
@@ -72,12 +72,12 @@ export default function HomeMobile() {
     <h2 className="text-[#0000B8] text-center text-2xl font-bold">Impact+</h2>
    <p className="text-center text-xs text-gray-700 mx-auto px-0" style={{width: '80%'}}>Measuring our global reach and the transformative effect we're having on communities worldwide
    </p>
-   <img src="theMap.png" alt="" className="w-full h-auto mt-4" />
+   <img src="theMap.png" alt="" className=" w-full max-w-sm h-auto mt-4" />
    </div>
   
 <div className='flex flex-col items-center w-full bg-gray-150'>
    <h2 className="text-[#0000B8] text-center text-2xl font-bold" style={{marginTop: '30px'}}>Our Initiative</h2>
-  <div className="statements" style={{ border: '0' }}>
+   <div className="statements" style={{ border: '0' }}>
   <div className="square-background">
   <img src="/IMG_7688-removebg-preview 1.png" alt=""/>  
   </div>
@@ -121,7 +121,7 @@ export default function HomeMobile() {
 
                     <div className="statements" style={{ border: '0' }}>
                     <div className="imgdiv1">
-                     <img src="homeImage.png" alt="" style={{ marginTop: '20px' }} />
+                     <img src="homeImage.png" alt="" style={{ marginTop: 'px' }} />
                      </div>
 
                       <div className="textdiv">
