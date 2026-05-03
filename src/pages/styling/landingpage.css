@@ -112,18 +112,18 @@
   }
 }
 .landingpageimage{
-    background-color: rgba(255, 202, 6, 1);
+    /* background-color: rgba(255, 202, 6, 1); */
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 70px;
 }
 .landingpageimage img{
-    height: 60px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     margin-bottom: -20px;
 }
 .landingpage h1{

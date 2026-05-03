@@ -101,7 +101,7 @@ export function Navbar({ currentPage, className }: NavbarProps) {
         <ProfileDropdown/>
 
         <Link to="/imabong" className="navbar__avatar" style={{ display: "flex", alignItems: "center" }}>
-            <img src="/Imabong.png" alt="Profile avatar" style={{ height: isMobile ? 36 : 40, width: "auto", borderRadius: 8 }} />
+            <img src="new_imabong.png" alt="Profile avatar" style={{ height: isMobile ? 36 : 40, width: "auto", borderRadius: 8 }} />
         </Link>
       </div>
       {/* Mobile menu overlay (only on mobile) */}

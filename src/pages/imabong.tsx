@@ -18,7 +18,7 @@ export default function Imabong() {
             </nav>
             <div className="landingpage">
                 <div className='landingpageimage'>
-                    <img src="/IMG_5568 1.png" alt="" />
+                    <img src="new_imabong.png" alt="" />
                 </div>
                 <h1>Hi, I'm Imaobong!</h1>
                 <p>Your AI assistant at Hakeela. I'm here to help you navigate your tech<br/> 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './styling/hdxconsulting.css';
 
 export default function HDxConsulting() {
@@ -9,8 +10,21 @@ export default function HDxConsulting() {
         { id: 5, name: "Tech talent training & Acquisition", position: "bottom-center" }
     ];
 
+
     return (
-        <div className="hdx-consulting-page">
+<div>
+            <nav className="navbarr">
+                <Link to="/" className="navbar__logo">
+                    <img src="HakStudios.png" style={{ overflow: 'hidden' }} alt="Hakeela logo" />
+                </Link>
+
+                <div className="navbottons">
+                    <Link to="/imabong" className="navbar__avatar">
+                        <img src="new_imabong.png" alt="Profile avatar" />
+                    </Link>
+                </div>
+            </nav>
+            <div className="hdx-consulting-page">
             {/* Hero Section */}
             <section className="hero-section">
                 <div className="hero-content">
@@ -119,5 +133,6 @@ export default function HDxConsulting() {
           </div>
         </section>
         </div>
+        </div>
     );
-}
+  }

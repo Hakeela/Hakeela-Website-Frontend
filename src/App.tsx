@@ -1,8 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/layout"
-import Home from "./pages/home_page"
+import HomeResponsive from "./pages/home_responsive"
 import About from "./pages/about";
 import Blog from "./pages/blog";
+import BlogDetail from "./pages/blog-detail";
 import SignUp from "./pages/HMP/signup";
 import HDxConsulting from "./pages/hdxconsulting";
 import MarginPortal from "./pages/HMP/marginportal";
@@ -26,11 +27,12 @@ const App = () => {
       <AuthProvider>
         <Routes>
             <Route element={<Layout/>}>
-              <Route index element={<Home/>}/>
+              <Route index element={<HomeResponsive/>}/>
               <Route path="/about" element={<About/>}/>
               <Route path="/blog" element={<Blog/>}/>
-              <Route path="/hdxconsulting" element={<HDxConsulting/>}/>
+              <Route path="/blog-detail" element={<BlogDetail/>}/>
             </Route>
+          <Route path="/hdxconsulting" element={<HDxConsulting/>}/>
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/check-your-email" element={<CheckYourEmail/>}/>
