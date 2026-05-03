@@ -1,8 +1,6 @@
 /* DESKTOP/MOBILE LAYOUT CONTROL */
-@media (max-width: 768px) {
-    .homepage-desktop {
-        display: none !important;
-    }
+.homepage-desktop {
+    display: block;
 }
 
 @media (min-width: 769px) {
@@ -15,6 +13,7 @@
 .homepage-mobile {
     min-height: 100vh;
     width: 100%;
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -1120,4 +1119,194 @@ margin-left: 200px;
     margin-top: 3px;
 }
 
+/* COMPREHENSIVE MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    /* Section 1 - Hero */
+    .homesection1 {
+        padding: 20px !important;
+    }
+    
+    .hometexts {
+        width: 100% !important;
+        padding: 0 10px;
+    }
+
+    .homeimages1 {
+        margin-top: 20px;
+    }
+
+    /* Section 3 - Initiative */
+    .homesection3i {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 0 15px;
+    }
+
+    .imgdiv {
+        width: 100% !important;
+        height: 250px !important;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .imgdiv img {
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .imgdiv1 {
+        width: 100% !important;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .imgdiv1 img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .imgdiv2 {
+        width: calc(100% - 30px) !important;
+        max-width: 340px !important;
+        height: 200px !important;
+        margin: 20px auto !important;
+    }
+
+    .imgdiv2 img {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+    }
+
+    .textdiv {
+        width: 100% !important;
+        padding: 20px 15px !important;
+        text-align: center !important;
+    }
+
+    .homesection3 button {
+        width: 120px !important;
+        padding: 8px 12px !important;
+    }
+
+    /* Section 4 - Learn */
+    .learn {
+        margin: 30px 0 !important;
+        padding: 0 15px;
+    }
+
+    .homelearn {
+        width: 100% !important;
+        max-width: 340px !important;
+        height: auto !important;
+        min-height: 120px;
+        padding: 20px !important;
+    }
+
+    .homelearn h2 {
+        font-size: 1.2rem !important;
+    }
+
+    .homelearn button {
+        width: 100px !important;
+        height: 35px !important;
+        padding: 8px 12px !important;
+    }
+
+    /* Section - Ima/Chatbot */
+    .ima {
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-top: 40px !important;
+        padding: 0 15px;
+    }
+
+    .imabong-full img {
+        width: 250px !important;
+        height: 250px !important;
+        border-radius: 50%;
+    }
+
+    .imabong {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .chatbot {
+        margin-top: 20px !important;
+        text-align: center;
+        width: 100% !important;
+        max-width: 340px;
+    }
+
+    .chatbot button {
+        width: 120px !important;
+        height: 35px !important;
+        padding: 8px 12px !important;
+    }
+
+    /* Section 5 - Support/Donate */
+    .supportt {
+        margin-top: 30px !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+    }
+
+    .support {
+        width: 100% !important;
+        flex-direction: column !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .donate {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 15px auto !important;
+        padding: 20px !important;
+    }
+
+    .interview {
+        width: 100% !important;
+        max-width: 340px !important;
+        height: auto !important;
+        min-height: 200px;
+        margin: 15px auto !important;
+        padding: 20px !important;
+    }
+
+    #dbotton, #lbotton {
+        width: 100px !important;
+        height: 35px !important;
+        padding: 8px 12px !important;
+    }
+
+    .bottons {
+        gap: 8px !important;
+    }
+
+    /* General responsive fixes */
+    .homesection1,
+    .homesection2,
+    .homesection3,
+    .homesection4,
+    .homesection5,
+    .homesection6 {
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+        padding: 0 10px !important;
+    }
+
+    .homestatements {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 0 15px;
+    }
+
+    .statements {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+    }
+}
  

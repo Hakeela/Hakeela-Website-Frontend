@@ -4,15 +4,15 @@ export default function HomeMobile() {
     return (
         <div className="flex flex-col items-center bg-gray-200 min-h-screen w-full gap-6 px-6">
   
-  <h1 className="text-center text-4xl font-bold text-[#0000B8] mt-20 max-w-md mx-auto px-10">
+  <h1 className="text-center text-3xl sm:text-4xl font-bold text-[#0000B8] mt-20 max-w-md mx-auto px-4">
     "Building the Future of Tech Inclusion one community a time"
   </h1>
 
-  <h1 className="text-center text-2xl font-bold text-[#0000B8] px-10">
+  <h1 className="text-center text-xl font-bold text-[#0000B8] px-4">
     using AI + Empathy
   </h1>
 
-  <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-10">
+  <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-0">
     Creating an inclusive and sustainable future of edtech for young Africans that are marginalized, underprivileged, and specially assisted.
   </p>
 
@@ -25,30 +25,30 @@ export default function HomeMobile() {
      <div className="flex flex-col items-center w-full gap-4 mt-6 bg-gray-100">
     <div className='' style={{ padding: '1.5rem 0.5rem' }}>
     <h2 className="text-[#0000B8] text-center text-2xl font-bold">Our Foundation</h2>
-   <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-10" >Building sustainable impact through clear vision, focused mission, and measurable objectives
+   <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-0" >Building sustainable impact through clear vision, focused mission, and measurable objectives
    </p>
    </div>
 
 
-    <div className="w-80 h-60 flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4">
+    <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
       <Eye className="icon-buttonmobile" size={24} strokeWidth={2} color="white" />
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Vision</h2>
-      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-10">
+      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">
         To provide the best technological learning, grooming, and growing platform for marginalized and special needs people, and also become the number one ed-tech solution provider for individuals, businesses, and organizations globally.
       </p>
       </div>
 
-      <div className="w-80 h-60 flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
+      <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
       <CircleDot className="icon-buttonmobile" size={24} strokeWidth={2} color="white"/>
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Mission</h2>
-      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-10">Our mission is to build an inclusive future where marginalized and special needs individuals have equal access to tech skills and opportunities. We aim to break barriers, promote inclusivity, and empower everyone to thrive in the global tech economy through accessibility and policy advocacy.
+      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">Our mission is to build an inclusive future where marginalized and special needs individuals have equal access to tech skills and opportunities. We aim to break barriers, promote inclusivity, and empower everyone to thrive in the global tech economy through accessibility and policy advocacy.
       </p>
         </div>
         
-      <div className="w-80 h-60 flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4">
+      <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
       <Rocket className="icon-buttonmobile" size={24} strokeWidth={2} color="white"/>
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Objectives</h2>
-      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-10">By 2030, we aim to train 10,000+ marginalized individuals, onboard 5,000+ to our AI-powered platform, lead in inclusive edtech, influence policies in 20+ countries, and build hubs and partnerships for learning and jobs.
+      <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">By 2030, we aim to train 10,000+ marginalized individuals, onboard 5,000+ to our AI-powered platform, lead in inclusive edtech, influence policies in 20+ countries, and build hubs and partnerships for learning and jobs.
         </p>
 </div>
             
@@ -67,7 +67,7 @@ export default function HomeMobile() {
 
    <div className="flex flex-col items-center bg-gray-200">
     <h2 className="text-[#0000B8] text-center text-2xl font-bold">Impact+</h2>
-   <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-10" >Measuring our global reach and the transformative effect we're having on communities worldwide
+   <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-0" >Measuring our global reach and the transformative effect we're having on communities worldwide
    </p>
    <img src="theMap.png" alt="" className="w-full max-w-sm h-auto mt-4" />
    </div>
@@ -85,7 +85,7 @@ export default function HomeMobile() {
   Accessibility Through A.I
   </h3>
 
-  <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+  <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-0">
       “Through our Hak-AbilityTech Initiative; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments,and we are doing all this using A.I”
     <br/>- Victor Eyo
   </p>
@@ -105,7 +105,7 @@ export default function HomeMobile() {
                             NOT SURE WHICH TECH SKILL
                             TO LEARN?
                         </h2>
-                        <h4 className="text-gray-700 flex flex-start text-sm  max-w-sm mx-auto px-10">
+                        <h4 className="text-gray-700 flex flex-start text-sm  max-w-sm mx-auto px-0\">
                              if you’re struggling to find the right tech program or 
                              don’t know where to start, chat with Imaobong — our A.I. chatbot ready to guide you.
                         </h4>
@@ -128,7 +128,7 @@ export default function HomeMobile() {
                         When Inclusion Meets<br></br>
                         Creativity
                     </h3>
-                    <p className="flex flex-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                    <p className="flex flex-start text-sm text-gray-700 max-w-sm mx-auto px-0\">
                         We build tech talent, design meaningful solutions, write impactful stories, and teach the next generation, all through the power of inclusive innovation.
                     </p>
                   
@@ -162,7 +162,7 @@ export default function HomeMobile() {
                     <div className="statements">
                         <img className="icons" src="TECH_HUB.png" alt=""/>
                         <h3>Hakeela Tech Hub</h3>
-                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-0\">
                            A network of physical tech hubs across at least 10 African countries, providing young Africans with quiet, durable workspaces to learn, collaborate, innovate, and grow.
                         </p>
                         <button>Learn More</button>
@@ -170,7 +170,7 @@ export default function HomeMobile() {
                     <div className="statements">
                         <img className="icons" src="/HFUND2-removebg-preview 1.png" alt=""/>
                         <h3>Hakeela Fund</h3>
-                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-10">
+                        <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-0\">
                             A dedicated scholarship program aimed at 
                             providing educational sponsorships for 
                             children and teens from marginalized 
