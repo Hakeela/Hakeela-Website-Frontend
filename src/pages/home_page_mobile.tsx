@@ -2,7 +2,8 @@ import { Eye, CircleDot, Rocket, Play } from 'lucide-react';
 
 export default function HomeMobile() {
     return (
-        <div className="flex flex-col items-center bg-gray-200 min-h-screen w-full gap-6 px-6">
+    <div className='w-full flex justify-center bg-gray-200'>
+        <div className="w-full max-w-sm min-h-screen flex flex-col items-center gap-6 px-6">
   
   <h1 className="text-center text-3xl sm:text-4xl font-bold text-[#0000B8] mt-20 max-w-md mx-auto px-4">
     "Building the Future of Tech Inclusion one community a time"
@@ -22,15 +23,15 @@ export default function HomeMobile() {
 
   <img src="/homeImage.png" alt="Description of the image" className="w-full max-w-sm h-auto" />
 
-     <div className="flex flex-col items-center w-full gap-4 mt-6 bg-gray-100">
+     <div className="flex flex-col items-center w-full gap-4 mt-6 bg-gray-150">
     <div className='' style={{ padding: '1.5rem 0.5rem' }}>
     <h2 className="text-[#0000B8] text-center text-2xl font-bold">Our Foundation</h2>
    <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-0" >Building sustainable impact through clear vision, focused mission, and measurable objectives
    </p>
    </div>
 
-
-    <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
+<div className="w-full max-w-sm min-h-screen flex flex-col items-center gap-6 px-6">
+    <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6 ">
       <Eye className="icon-buttonmobile" size={24} strokeWidth={2} color="white" />
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Vision</h2>
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">
@@ -38,7 +39,7 @@ export default function HomeMobile() {
       </p>
       </div>
 
-      <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
+      <div className="w-full max-w-sm flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
       <CircleDot className="icon-buttonmobile" size={24} strokeWidth={2} color="white"/>
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Mission</h2>
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">Our mission is to build an inclusive future where marginalized and special needs individuals have equal access to tech skills and opportunities. We aim to break barriers, promote inclusivity, and empower everyone to thrive in the global tech economy through accessibility and policy advocacy.
@@ -51,9 +52,11 @@ export default function HomeMobile() {
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">By 2030, we aim to train 10,000+ marginalized individuals, onboard 5,000+ to our AI-powered platform, lead in inclusive edtech, influence policies in 20+ countries, and build hubs and partnerships for learning and jobs.
         </p>
 </div>
+
+</div>
             
 
-<div className="flex items-center gap-6 py-4 overflow-x-auto "style={{marginTop: '-50px', marginBottom: '-50px' }}>
+<div className="flex items-center gap-6 py-4 "style={{marginTop: '-50px', marginBottom: '-50px' }}>
 
   <img src="partners.png" alt="" className="h-20 w-20 object-contain flex-shrink-0" />
   <img src="waff-removebg.png" alt="" className="h-4 w-8 object-contain flex-shrink-0" />
@@ -72,7 +75,7 @@ export default function HomeMobile() {
    <img src="theMap.png" alt="" className="w-full max-w-sm h-auto mt-4" />
    </div>
   
-<div className='flex flex-col items-center w-full bg-gray-100'>
+<div className='flex flex-col items-center w-full bg-gray-150'>
    <h2 className="text-[#0000B8] text-center text-2xl font-bold" style={{marginTop: '30px'}}>Our Initiative</h2>
   <div className="square-background">
   <img src="/IMG_7688-removebg-preview 1.png" alt=""/>  
@@ -265,6 +268,7 @@ export default function HomeMobile() {
             </section>
 
               
+ </div>
  </div>
 
 </div>
