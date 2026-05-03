@@ -232,14 +232,6 @@ export default function Home() {
                         <h5>Comfort Alphonsus</h5>
                         <p>Chief Graphics Designer</p>
                     </div>
-                        
-                        <div>
-                        <div className="circle-background">
-                            <img src="micheal_headshot.png" alt="" />
-                        </div>
-                        <h5>Nwogbaga Michael</h5>
-                        <p>Product Designer</p>
-                    </div>
 
                 </div>
 

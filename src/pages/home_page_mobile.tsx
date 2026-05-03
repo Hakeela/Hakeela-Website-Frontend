@@ -30,8 +30,9 @@ export default function HomeMobile() {
    </p>
    </div>
 
-<div className="w-full max-w-sm min-h-screen flex flex-col items-center gap-6 px-6">
-    <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6 ">
+<div className="homestatements" style={{marginTop: '5px'}}>
+
+    <div className="statements">
       <Eye className="icon-buttonmobile" size={24} strokeWidth={2} color="white" />
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Vision</h2>
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">
@@ -39,14 +40,14 @@ export default function HomeMobile() {
       </p>
       </div>
 
-      <div className="w-full max-w-sm flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
+      <div className="statements">
       <CircleDot className="icon-buttonmobile" size={24} strokeWidth={2} color="white"/>
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Mission</h2>
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">Our mission is to build an inclusive future where marginalized and special needs individuals have equal access to tech skills and opportunities. We aim to break barriers, promote inclusivity, and empower everyone to thrive in the global tech economy through accessibility and policy advocacy.
       </p>
         </div>
         
-      <div className="w-full max-w-sm h-auto flex flex-col items-start bg-white border-l-4 border-l-[#0000B8] rounded-lg gap-4 p-6">
+      <div className="statements">
       <Rocket className="icon-buttonmobile" size={24} strokeWidth={2} color="white"/>
       <h2 className='foundationmobile text-[#0000B8] font-semibold'>Objectives</h2>
       <p className="foundP text-xs text-gray-700 max-w-xs mx-auto px-0">By 2030, we aim to train 10,000+ marginalized individuals, onboard 5,000+ to our AI-powered platform, lead in inclusive edtech, influence policies in 20+ countries, and build hubs and partnerships for learning and jobs.
@@ -63,14 +64,13 @@ export default function HomeMobile() {
   <img src="falf-removebg.png" alt="" className="h-4 w-8 object-contain flex-shrink-0" />
   <img src="experteens-removebg.png" alt="" className="h-12 w-12 object-contain flex-shrink-0" />
   <img src="loi-removebg.png" alt="" className="h-4 w-12 object-contain flex-shrink-0"/>
-  <img src="ashoka-removebg.png" alt="" className="h-12 w-12 object-contain flex-shrink-0"/>
 </div>
 </div>
 
 
    <div className="flex flex-col items-center bg-gray-200">
     <h2 className="text-[#0000B8] text-center text-2xl font-bold">Impact+</h2>
-   <p className="text-center text-xs text-gray-700 max-w-sm mx-auto px-0" >Measuring our global reach and the transformative effect we're having on communities worldwide
+   <p className="text-center text-sm text-gray-700 max-w-sm mx-auto px-0" >Measuring our global reach and the transformative effect we're having on communities worldwide
    </p>
    <img src="theMap.png" alt="" className="w-full max-w-sm h-auto mt-4" />
    </div>
@@ -83,12 +83,12 @@ export default function HomeMobile() {
 
   <div className="textdiv" style={{ marginTop: '20px' }}>
   <img className="icons" src="/HSNAT2-removebg-preview 1.png"alt=""/>
-  <h3 className="homesection3-heading-desktop font-bold">
-  Empowering <br></br>
-  Accessibility Through A.I
+  <h3 className="font-bold text-[#0000B8] text-center">
+  Empowering Accessibility Through A.I
   </h3>
 
-  <p className="flex flext-start text-sm text-gray-700 max-w-sm mx-auto px-0">
+  <p className="text-sm text-center text-gray-700 max-w-sm mx-auto px-0">
+
       “Through our Hak-AbilityTech Initiative; we are building a world where the visually impaired, speech impaired, or hearing impaired can learn tech skills, work in tech establishments,and we are doing all this using A.I”
     <br/>- Victor Eyo
   </p>
@@ -117,34 +117,30 @@ export default function HomeMobile() {
                    
                 </div>
 
-    <section className="homesection3">
 
-            <div className="homesection3ii">
+                    <div className="imgdiv1">
+                     <img src="homeImage.png" alt="" style={{ marginTop: '50px' }} />
+                     </div>
 
-              <div className="imgdiv1">
-                    <img src="homeImage.png" alt="" />
-                </div>
-                <div className="textdiv" style={{ marginTop: '10px' }}>
+                      <div className="textdiv">
 
                     <img className="icons" src="HakStudios.png" alt=""/>
-                    <h3 className="homesection3-heading-desktop font-bold">
-                        When Inclusion Meets<br></br>
-                        Creativity
+                    <h3 className="text-[#0000B8] font-bold text-center">
+                        When Inclusion Meets Creativity
                     </h3>
-                    <p className="flex flex-start text-sm text-gray-700 max-w-sm mx-auto px-0\">
+                    <p className="text-sm text-center text-gray-700 max-w-sm mx-auto px-0">
                         We build tech talent, design meaningful solutions, write impactful stories, and teach the next generation, all through the power of inclusive innovation.
                     </p>
-                  
-                    <button style={{ width: '150px' }}>Collaborate with us</button>
-                </div>
+                     <button className='border-1 border-[#0000B8] text-[#0000B8] hover:bg-[#0000B8] hover:text-white' style={{ borderRadius: '30px', paddingLeft:'10px', paddingRight: '10px', marginTop: '15px', marginBottom: '50px', fontSize: '14px'}}>Collaborate with us</button>
+
                 
                 </div>
-            </section>
+          
 
 
              <section className="homesection3m">
                 <div className="imgdiv2mobile">
-                <h4 className="text-white" > Meet Hakportals!</h4>
+                <h4 className="text-white text-center"> Meet Hakportals!</h4>
                 <p className="p2m">Easily launch your courses, ebooks, events, and products <br/>— and accept payments all in one place.
                     </p>
 
@@ -220,14 +216,6 @@ export default function HomeMobile() {
                         </div>
                         <h5>Comfort Alphonsus</h5>
                         <p>Chief Graphics Designer</p>
-                    </div>
-                        
-                        <div>
-                        <div className="circle-background">
-                            <img src="micheal_headshot.png" alt="" />
-                        </div>
-                        <h5>Nwogbaga Michael</h5>
-                        <p>Product <br/>Designer</p>
                     </div>
 
                 </div>
