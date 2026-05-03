@@ -474,6 +474,10 @@ margin-left: 200px;
 .imgdiv2mobile{
     background-color: rgba(0, 0, 184, 1);
     border-radius: 5px;
+    width: 80% ;
+    margin: 0 auto;
+    margin-top: 30px;
+    
 
 }
 
